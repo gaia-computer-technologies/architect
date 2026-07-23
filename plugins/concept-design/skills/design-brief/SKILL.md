@@ -1,6 +1,11 @@
-# /design-brief
+---
+name: design-brief
+description: Turn a client conversation, loose notes, or a mood description into a structured architectural design brief — programme, site, design intent, materials, sustainability, budget, and open questions. Use when an architect needs to formalise design intent at RIBA Stage 1 / AIA Pre-Design, wants to "write a brief", "structure this client meeting", or turn a vague idea into a project north-star. Pairs with programme-schedule (area validation) and material-palette (material direction).
+---
 
-Generate a structured design brief from a conversation or loose notes.
+# Design Brief
+
+Generate a structured design brief from a conversation or loose notes. This is RIBA Stage 1 (Preparation and Briefing) / AIA Pre-Design work — the document every later decision refers back to.
 
 ## When to use
 
@@ -36,6 +41,8 @@ The user provides raw input in any form:
 ## Domain knowledge
 
 ### Programme defaults by project type
+
+These are **professional conventions and typical ranges — not codes, not client requirements.** Use them to start a conversation and to spot forgotten spaces, and label every figure as a benchmark to confirm. Areas vary widely by market, site, and brief. When you carry a number into the brief, show its basis (e.g. "living at 25–35% of a 130–180m² residential programme").
 
 **Single-family residential (3-bed):**
 - Living, dining, kitchen (often open plan): 45-65m²
@@ -119,3 +126,14 @@ OPEN QUESTIONS
 - Don't use generic language: "a welcoming entrance" tells no one anything. Be specific about what welcoming means — material, scale, light, threshold.
 - Don't include cost estimates unless the user provides budget data.
 - Don't assume location-specific codes. Note "verify local requirements" where relevant.
+
+## Guardrails
+
+- Programme areas are benchmarks to confirm, never requirements. Show the basis of any figure you use.
+- Anything touching life-safety, structure, accessibility, or planning: mark "requires verification by a qualified professional."
+
+## Hand off to
+
+- **programme-schedule** — turn the programme into a checked schedule of accommodation with explicit net-to-gross.
+- **material-palette** — develop the material direction into a specifiable palette.
+- **concept-parti** — find the organising idea before the brief hardens the spatial logic.

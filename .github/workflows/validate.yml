@@ -1,0 +1,15 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Structural lint (manifests, frontmatter, naming, counts)
+        run: bash scripts/lint.sh
+      - name: Shellcheck hook + lint scripts
+        run: shellcheck --severity=error scripts/lint.sh plugins/*/hooks/*.sh
