@@ -1,6 +1,11 @@
-# /space-feel
+---
+name: space-feel
+description: Describe the experiential, phenomenological qualities of a space — compression and release, threshold, prospect and refuge, light, sound, temperature, materiality — in the register of Zumthor and Pallasmaa. Use when an architect wants to articulate how a space FEELS, not how it looks, for a brief, competition, client conversation, or their own clarity. Say "how does this space feel", "describe the atmosphere", "the experience of walking through". For a design argument aimed at an audience, use concept-narrative instead.
+---
 
-Describe the experiential qualities of a space — how it feels to be in it, not how it looks.
+# Space Feel
+
+Describe the experiential qualities of a space — how it feels to be in it, not how it looks. This is pure phenomenological description. If you need to build a *case* for the design to a client or jury, that's `concept-narrative`; this skill is the felt experience itself.
 
 ## When to use
 

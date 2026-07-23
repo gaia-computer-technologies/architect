@@ -1,6 +1,13 @@
-# /concept-narrative
+---
+name: concept-narrative
+description: Write the design rationale for a concept presentation — the project's core argument, framed for a specific audience (client, competition jury, planning board, or publication). Use when an architect needs to explain WHY a design is the way it is, a "project statement", "design story", "competition text", or "concept rationale". Distinct from space-feel (pure phenomenological description): this builds an argument tied to real, named design decisions — and it actively resists empty archispeak.
+---
+
+# Concept Narrative
 
 Write the design rationale and narrative for a concept presentation.
+
+The failure mode this skill exists to prevent: fluent, empty architectural rhetoric — "the façade acts as a porous urban threshold," "a dialogue with the landscape," "a catalyst for community." A narrative earns its place only by tying each claim to a real, specific design move. If a sentence would survive being pasted into any other project, cut it.
 
 ## When to use
 

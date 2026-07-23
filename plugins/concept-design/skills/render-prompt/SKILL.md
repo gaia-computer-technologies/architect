@@ -1,10 +1,17 @@
-# /render-prompt
+---
+name: render-prompt
+description: Craft a structured, optimised prompt for AI architectural image tools — subject, style, materials, lighting, camera, atmosphere, plus a targeted negative prompt and cross-view consistency notes. Use when an architect wants a "render prompt", to visualise a concept, or to translate loose design intent into precise image-model instructions. Teaches material/lighting/camera specificity and how to hold the same building across views (seed, style reference, ControlNet). Feeds from material-palette and space-feel.
+---
+
+# Render Prompt
 
 Craft an optimised architectural render prompt from a design description.
 
 ## When to use
 
-When an architect, designer, or homeowner needs to generate a photorealistic architectural render using any AI image model (Gaia Studio, Midjourney, DALL-E, Stable Diffusion, Flux). The skill translates loose design intent into precise, structured prompts that produce publication-quality results.
+When an architect, designer, or homeowner needs an AI image render and wants the prompt to actually produce what they intend. This skill translates loose design intent into a precise, structured prompt that works across image models. It crafts the prompt; it does not generate the image.
+
+The single biggest quality lever is **material specificity** — a named material and finish beats any adjective. The second is describing **light behaviour** (raking, diffused, grazing) rather than mood words. Structure and negatives matter, but those two dominate.
 
 ## Input
 
@@ -66,6 +73,20 @@ When the user references a style, expand it:
 - **Mediterranean Modern**: lime wash walls, terracotta, olive wood, linen, outdoor-indoor continuity
 - **Mid-Century Modern**: walnut, brass, terrazzo, statement lighting, low-slung furniture, warm tones
 
+### Holding the same building across views
+
+Image models keep no 3D model between generations, so "the same building from the south" tends to return a *new* building. To hold a design across views:
+- **Reference image / ControlNet** is the only reliable geometry lock. Condition on a massing screenshot, clay render, depth map, or line drawing so the model restyles without moving walls. This is the difference between concept mood and iterating a *specific* scheme.
+- **Seed** holds broad composition and volume across small prompt changes on the same model — good for swapping materials or light on one view.
+- **Style reference** (a fixed reference image, or a curated 30–60 image board of the practice's own work) holds palette and atmosphere so new views read in one visual language.
+- Be honest about the ceiling: for true multi-view consistency of a specific building, you still need the 3D model. Text alone re-rolls.
+
+### Negative prompts: target real defects
+Three to five sharp exclusions beat twenty vague ones. The discipline: generate first, look at what actually broke, then exclude *that*. A reliable base for architecture: `distorted perspective, warped lines, impossible geometry, plastic-looking materials, oversaturated, blown highlights, people, cars, text, watermark`. Don't stack fears you haven't seen — every weak negative dilutes the ones doing real work.
+
+### Model choice
+Model strengths and names change fast, so they live in [references/model-notes.md](references/model-notes.md), not here — load it only if the user wants a tool recommendation, and treat it as a snapshot to sanity-check against today's tools, not gospel. What's durable is in this file: structure, material specificity, light behaviour, and the consistency techniques above.
+
 ## Output format
 
 ```
@@ -79,8 +100,9 @@ NEGATIVE PROMPT
 
 PARAMETERS
 ──────────
-Aspect ratio: [e.g. 16:9, 3:2, 4:5]
-Best suited for: [which AI model/tool handles this style best]
+Aspect ratio: [e.g. 16:9, 3:2, 4:5 — always set one; unset ratios distort proportions]
+Consistency: [reference-image/ControlNet to hold a specific design; seed to iterate one view]
+Model family: [general concept model vs geometry-locked/plugin tool — see references/model-notes.md]
 ```
 
 ## What you don't do
@@ -89,3 +111,5 @@ Best suited for: [which AI model/tool handles this style best]
 - Don't suggest styles the user didn't ask for unless filling a clear gap.
 - Don't use "beautiful" or "stunning" — these are noise words in image prompts. Be specific.
 - Don't output more than one prompt unless the user asks for variations.
+- Don't imply a render is buildable. A prompt produces an image, not a design — geometry, code, and specification are not implied by a good picture.
+- Flag the IP reality when it matters: under current US Copyright Office guidance (2025), a purely AI-generated image is not copyrightable without meaningful human authorship — relevant before an architect puts one on a competition board or in a proposal.
