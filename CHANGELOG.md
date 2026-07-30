@@ -12,7 +12,7 @@ then double the toolkit.
 - **Added YAML frontmatter (`name`, `description`) to all skills and the agent.** Without it, skills loaded with empty metadata and never auto-triggered. Skill `name`s are lowercase-hyphenated and match their directory (no `/` — a `/design-brief` name was invalid).
 - **Wired up the orchestrating agent.** It lived at repo-root `agents/` (discovered by nothing) and had no frontmatter. Moved into the plugin at `plugins/concept-design/agents/` with frontmatter.
 - **Rehabilitated the governance rules.** `professional-disclaimer`, `transparency`, and `voice` were orphaned files that loaded nowhere. They are now folded into the agent and skills, and enforced by an advisory hook.
-- **Fixed the marketplace manifest and install command.** `marketplace.json` `name` had spaces (invalid — now `architecture-skills`) and no `owner`; the documented install command didn't match. Skill commands are namespaced `/concept-design:<skill>`.
+- **Fixed the marketplace manifest and install command.** `marketplace.json` `name` had spaces (invalid — now `gaia-ai-architect`) and no `owner`; the documented install command didn't match. Skill commands are namespaced `/concept-design:<skill>`.
 - **Flattened the plugin layout** from `plugins/00-concept-design/` to `plugins/concept-design/`.
 
 ### Added (new skills — 5 → 11)
@@ -30,14 +30,14 @@ then double the toolkit.
 - `CHANGELOG.md`, `CONTRIBUTING.md`.
 
 ### Changed (content)
-- `render-prompt` — removed time-sensitive model names (moved to a clearly-dated `references/model-notes.md`); added cross-view consistency (seed / style reference / ControlNet), a "target real defects" negative-prompt discipline, and an IP note.
+- `render-prompt` — reworked: recommends **Midjourney** (explore/mood) + **Nano Banana** (edit and hold a specific design), maps the style vocabulary to **Gaia Studio presets** ([gaia.computer](https://gaia.computer)), and teaches cross-tool prompting; added cross-view consistency (seed / style reference / ControlNet), a "target real defects" negative-prompt discipline, a worked example, and an IP note. Volatile tool detail lives in a dated `references/model-notes.md`.
 - `material-palette` — moved the large material-families reference to `references/material-families.md` (progressive disclosure).
 - `design-brief` — flagged programme benchmarks as convention-to-verify, not requirements; added phase awareness and hand-offs.
 - `concept-narrative` / `space-feel` — sharpened the boundary between them; added an explicit anti-archispeak guardrail.
 - `README.md` — corrected install and commands; replaced the unsourced "70% of rework" claim with a defensible statement; documented the governance model.
 
 ### Repository
-- Renamed `ai-for-architects` → `architecture-skills`.
+- Renamed `ai-for-architects` → `gaia-ai-architect`.
 
 ## [0.1.0]
 - Initial release: five concept-phase skills (render-prompt, design-brief, material-palette, concept-narrative, space-feel), one agent, three rules. (Pre-frontmatter; superseded by 0.2.0.)
