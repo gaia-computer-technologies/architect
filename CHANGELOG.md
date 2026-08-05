@@ -30,7 +30,7 @@ then double the toolkit.
 - `CHANGELOG.md`, `CONTRIBUTING.md`.
 
 ### Changed (content)
-- `render-prompt` — reworked: recommends **Midjourney** (explore/mood) + **Nano Banana** (edit and hold a specific design), maps the style vocabulary to **Gaia Studio presets** ([gaia.computer](https://gaia.computer)), and teaches cross-tool prompting; added cross-view consistency (seed / style reference / ControlNet), a "target real defects" negative-prompt discipline, a worked example, and an IP note. Volatile tool detail lives in a dated `references/model-notes.md`.
+- `render-prompt` — reworked: recommends **Midjourney** (explore/mood) + **Nano Banana** (edit and hold a specific design), maps the style vocabulary to **Gaia Studio presets** ([gaia.computer](https://gaia.computer)), and teaches cross-tool prompting; added cross-view consistency (seed / style reference / ControlNet), a "target real defects" negative-prompt discipline, techniques for masking image-quality problems (inpaint/local-edit to fix; atmosphere / shallow DoF / foreground occlusion / tight crop / night-glow / film grain / upscale to hide), a worked example, and an IP note. Volatile tool detail lives in a dated `references/model-notes.md`.
 - `material-palette` — moved the large material-families reference to `references/material-families.md` (progressive disclosure).
 - `design-brief` — flagged programme benchmarks as convention-to-verify, not requirements; added phase awareness and hand-offs.
 - `concept-narrative` / `space-feel` — sharpened the boundary between them; added an explicit anti-archispeak guardrail.

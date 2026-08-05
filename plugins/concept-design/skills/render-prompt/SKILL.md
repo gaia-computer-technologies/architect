@@ -86,6 +86,26 @@ Image models keep no 3D model between generations, so "the same building from th
 ### Negative prompts: target real defects
 Three to five sharp exclusions beat twenty vague ones. The discipline: generate first, look at what actually broke, then exclude *that*. A reliable base for architecture: `distorted perspective, warped lines, impossible geometry, plastic-looking materials, oversaturated, blown highlights, people, cars, text, watermark`. Don't stack fears you haven't seen — every weak negative dilutes the ones doing real work.
 
+### Masking quality problems
+
+AI renders fail in predictable places — warped lines, plastic materials, mangled railings and furniture, impossible geometry in the middle distance. Two ways to deal with it: fix the flaw, or hide it. Reach for *fix* first; use *hide* to compose around what you can't fix.
+
+**Fix it locally — don't re-roll the whole image.**
+- **Inpaint / mask the broken region** and regenerate only that (a warped window, an extra floor, a bad reflection). Keeps the good 90%.
+- **Instruction edit** (Nano Banana) — "straighten the railing," "remove the figure on the left" — same idea without a manual mask, and it holds the rest of the image.
+
+**Hide it — compositional and photographic cover.** Build these into the prompt from the start:
+- **Atmosphere** — fog, haze, dusk / blue hour, low raking sun, rain. Low light and atmosphere forgive detail flaws and swallow a messy background; volumetric light hides a bad middle distance.
+- **Shallow depth of field** — an 85mm-equivalent at a wide aperture throws foreground and background soft. Put the one clean element in focus; blur is where AI weakness hides.
+- **Foreground occlusion** — a branch, planting, a column, furniture across the frame covers the messy zone and adds depth.
+- **Crop tight to a detail** — a material junction, a window reveal, a corner. Details render cleanly; whole buildings invite impossible geometry. Frame the problem out.
+- **Night + interior glow** — dark exterior, warm lit windows. You read the glow, not the geometry; darkness masks most flaws.
+- **Film treatment** — grain, halation, a film-stock look (Portra / Ektar), slight chromatic aberration. Kills the too-clean "plastic AI" tell and reads as a photograph.
+- **Drop photorealism** — a watercolour, sketch, or section-collage output is judged as a concept image, not a photo, so photoreal failures stop mattering.
+- **Generate small, then upscale** — a generative upscaler invents plausible micro-detail over softness.
+
+**One integrity line:** masking makes a *concept image* convincing; it does not make the design resolved or the render real. Don't let atmosphere hide an unresolved junction from *you*, and don't pass a masked render to a client as a photograph (see the IP note below).
+
 ### Recommended tools
 
 Two tools cover most concept-phase work — tell the architect which to reach for:
