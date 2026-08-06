@@ -4,7 +4,7 @@
   "description": "Concept-phase skills and an orchestrating agent for architects — briefs, site reads, area schedules, material palettes, spatial atmosphere, parti, narratives, render prompts, precedent studies, and design critique. Upstream of BIM; RIBA Stage 0–2 / AIA Pre-Design to Schematic Design.",
   "author": { "name": "Gaia", "url": "https://gaia.computer" },
   "homepage": "https://gaia.computer",
-  "repository": "https://github.com/gaia-computer-technologies/architecture-skills",
+  "repository": "https://github.com/gaia-computer-technologies/gaia-ai-architect",
   "license": "MIT",
   "keywords": [
     "architecture",

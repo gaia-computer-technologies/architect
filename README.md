@@ -57,7 +57,7 @@ The **concept-architect** agent runs the arc and knows when to stop. The **conce
 | Material Palette | `/concept-design:material-palette` | Suggest a cohesive, specifiable material palette |
 | Space Feel | `/concept-design:space-feel` | Describe how a space feels — compression, threshold, light, atmosphere |
 | Concept Narrative | `/concept-design:concept-narrative` | Write the design argument for a client, jury, or planning board |
-| Render Prompt | `/concept-design:render-prompt` | Craft structured prompts for AI renders, with cross-view consistency |
+| Render Prompt | `/concept-design:render-prompt` | Structured prompts for AI renders — recommends Midjourney + Nano Banana, maps to Gaia Studio presets |
 | Precedent Study | `/concept-design:precedent-study` | Build verifiable case studies — flags every attribution, invents nothing |
 | Design Critique | `/concept-design:design-critique` | Red-team a scheme against its own stated intent before a pin-up |
 | Concept (router) | `/concept-design:concept` | Route a request to the right skill, or show the menu |
@@ -69,11 +69,11 @@ The **concept-architect** agent runs the arc and knows when to stop. The **conce
 ## Install
 
 ```bash
-claude plugin marketplace add gaia-computer-technologies/architecture-skills
-claude plugin install concept-design@architecture-skills
+claude plugin marketplace add gaia-computer-technologies/gaia-ai-architect
+claude plugin install concept-design@gaia-ai-architect
 ```
 
-Skills then appear as `/concept-design:<skill>` (e.g. `/concept-design:design-brief`), and Claude will also invoke them automatically when a request matches. Or in Claude Desktop: Settings → Plugins → Add marketplace from GitHub → `gaia-computer-technologies/architecture-skills`.
+Skills then appear as `/concept-design:<skill>` (e.g. `/concept-design:design-brief`), and Claude will also invoke them automatically when a request matches. Or in Claude Desktop: Settings → Plugins → Add marketplace from GitHub → `gaia-computer-technologies/gaia-ai-architect`.
 
 ## Guardrails, by design
 

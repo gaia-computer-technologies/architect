@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Structural lint for the architecture-skills marketplace.
+# Structural lint for the gaia-ai-architect marketplace.
 # Validates manifests, skill/agent frontmatter, naming, and doc/skill count.
 # Run: bash scripts/lint.sh   (requires: bash, jq)
 set -euo pipefail
