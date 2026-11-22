@@ -1,17 +1,24 @@
 {
-  "name": "gaia-ai-architect",
-  "owner": { "name": "Gaia (gaia.computer)" },
+  "name": "gaia",
+  "owner": {
+    "name": "Gaia Computer Technologies, Inc.",
+    "url": "https://github.com/gaia-computer-technologies"
+  },
   "metadata": {
-    "description": "Open-source Claude Code skills for the concept phase of architecture — upstream of BIM. By Gaia (gaia.computer).",
-    "version": "0.2.0"
+    "description": "Open-source Agent Skills for architects, by Gaia Computer Technologies, Inc.",
+    "version": "1.0.0"
+  },
+  "renames": {
+    "concept-design": "architect"
   },
   "plugins": [
     {
-      "name": "concept-design",
-      "source": "./plugins/concept-design",
-      "description": "Concept-phase skills and an orchestrating agent for architects: design brief, site context, programme schedule, material palette, space feel, concept parti, concept narrative, render prompt, precedent study, and design critique.",
+      "name": "architect",
+      "displayName": "Architect",
+      "source": "./",
+      "description": "An AI assistant for the architect's working week: briefs, sites and planning research, drawings (DXF, diagrams, site maps, massing), Rhino/Revit/IFC connectors, specs, cost and carbon checks, minutes, RFIs, site reports, contract letters, bids and fee proposals, and the hard conversations. Every number shows its basis; nothing is fabricated.",
       "category": "architecture",
-      "keywords": ["architecture", "concept-design", "AEC", "RIBA", "AIA", "schematic-design"]
+      "tags": ["architecture", "AEC", "BIM", "RIBA", "AIA", "design", "construction", "planning"]
     }
   ]
 }
