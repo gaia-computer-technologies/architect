@@ -1,0 +1,11 @@
+{
+  "name": "Eval option A",
+  "site": [[0, 0], [40, 0], [40, 30], [0, 30]],
+  "setbacks": {"default": 3.0, "edges": {"0": 6.0}},
+  "max_height": 21.0,
+  "floor_to_floor": {"ground": 4.5, "typical": 3.15},
+  "coverage_max": 0.6,
+  "far_max": 3.0,
+  "efficiency": 0.8,
+  "unit_net_area": 65
+}

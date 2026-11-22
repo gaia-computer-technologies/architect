@@ -1,0 +1,125 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "building": "yes",
+    "height": "12"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       4.0,
+       52.0
+      ],
+      [
+       4.0002,
+       52.0
+      ],
+      [
+       4.0002,
+       52.0001
+      ],
+      [
+       4.0,
+       52.0001
+      ],
+      [
+       4.0,
+       52.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "building": "yes",
+    "building:levels": "3"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       4.0003,
+       52.0
+      ],
+      [
+       4.0005,
+       52.0
+      ],
+      [
+       4.0005,
+       52.0001
+      ],
+      [
+       4.0003,
+       52.0001
+      ],
+      [
+       4.0003,
+       52.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "building": "yes"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       4.0,
+       52.0002
+      ],
+      [
+       4.0002,
+       52.0002
+      ],
+      [
+       4.0002,
+       52.0003
+      ],
+      [
+       4.0,
+       52.0003
+      ],
+      [
+       4.0,
+       52.0002
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "highway": "residential"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      3.9999,
+      52.00015
+     ],
+     [
+      4.0006,
+      52.00015
+     ]
+    ]
+   }
+  }
+ ]
+}

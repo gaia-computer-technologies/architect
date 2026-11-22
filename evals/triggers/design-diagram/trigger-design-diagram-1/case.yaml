@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-design-diagram-1
+description: Should route to design-diagram.
+tags:
+- trigger
+- skill:design-diagram
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: 'Make me a bubble diagram for a small primary school: hall 180 m2, kitchen 40, six classrooms of 60, library 50, staff room 40, plant 25. Hall must touch the kitchen; plant away from classrooms.'
+graders:
+- name: fires-design-diagram
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:design-diagram)"'
+  arm: both

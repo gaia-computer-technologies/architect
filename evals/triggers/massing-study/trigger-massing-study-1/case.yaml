@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-massing-study-1
+description: Should route to massing-study.
+tags:
+- trigger
+- skill:massing-study
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: How much can we build on a 40 x 30 m site with a 21 m height limit, 3 m setbacks all round and a plot ratio of 3? Rough yield and unit count, please.
+graders:
+- name: fires-massing-study
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:massing-study)"'
+  arm: both

@@ -68,6 +68,8 @@ Compare on the criteria that decide the choice for this project, not a generic l
 <!-- architect:requires-disclaimer -->
 ```
 
+Copy the disclaimer exactly as shown, including the `<!-- architect:requires-disclaimer -->` line. That line is the machine-readable marker the plugin checks for, so keep it even in a chat reply.
+
 ## What you don't do
 
 - Don't invent product names, product ranges, performance values, test standards, or section codes. Unsourced means "to confirm".

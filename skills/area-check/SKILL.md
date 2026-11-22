@@ -70,6 +70,8 @@ Gaps and caveats: [open outlines skipped, spaces without quantities, faces assum
 <!-- architect:requires-disclaimer -->
 ```
 
+Copy the disclaimer exactly as shown, including the `<!-- architect:requires-disclaimer -->` line. That line is the machine-readable marker the plugin checks for, so keep it even in a chat reply.
+
 The disclaimer applies when areas feed planning, leases, sales or cost. A purely internal design check can leave it off.
 
 ## What you don't do

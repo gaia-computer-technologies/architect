@@ -31,3 +31,21 @@ jobs:
           out="$(npx -y skills@1.9.0 add . --list 2>&1)"
           echo "$out"
           if echo "$out" | grep -qi "skipp"; then echo "npx skills skipped a skill"; exit 1; fi
+
+  evals:
+    # The key-free part of the eval suite: every bundled script on its fixtures,
+    # the suite's own structure, and the plugin validator. The LLM cases (routing
+    # and guardrails) need a paid API key, so they run locally: see evals/README.md.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - name: Script evals (fixtures, expected numbers, refusals) and suite checks
+        run: uv run --with pytest --with pyyaml pytest evals/scripts -q
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Plugin validator (no API key needed)
+        env:
+          DISABLE_TELEMETRY: "1"
+        run: npx -y @anthropic-ai/claude-code@2.1.319 plugin validate .

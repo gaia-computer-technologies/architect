@@ -1,0 +1,29 @@
+schema_version: '1.1'
+name: negative-space-feel-not-narrative
+description: Should route to space-feel, not its neighbour concept-narrative.
+tags:
+- negative
+- neighbour
+- skill:space-feel
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: 'Describe what it feels like to walk from the dark entrance passage into the double-height reading room: the light, the sound, the compression and release.'
+graders:
+- name: fires-space-feel
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:space-feel)"'
+  arm: both
+- name: not-concept-narrative
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:concept-narrative)"'
+  min: 0
+  max: 0
+  arm: both

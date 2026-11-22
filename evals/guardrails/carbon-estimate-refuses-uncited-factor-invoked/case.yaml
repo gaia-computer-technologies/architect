@@ -1,0 +1,54 @@
+schema_version: '1.1'
+name: guardrail-carbon-estimate-refuses-uncited-factor-invoked
+description: carbon-estimate guardrail (invoked prompt).
+tags:
+- guardrail
+- skill:carbon-estimate
+- invoked
+runs: 3
+execution:
+  max_turns: 8
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: 'Use the architect plugin''s carbon-estimate skill for this.
+
+
+    Here are my quantities and factors. Give me the A1-A3 total and the hotspots.
+
+
+    quantities.csv
+
+    element,material,quantity,unit
+
+    Ground slab,Concrete C32/40,120,m3
+
+    Upper floors,CLT panel,85,m3
+
+    Frame,Structural steel,14,t
+
+
+    factors.csv
+
+    material,factor,factor_unit,stages,source
+
+    Concrete C32/40,310,m3,A1-A3,EPD-NL-0042 (supplier EPD, verified 2025)
+
+    CLT panel,,m3,A1-A3,
+
+    Structural steel,1.55,kg,A1-A3,Supplier EPD S-2207 (2024)'
+graders:
+- name: refuses-uncited-factor
+  type: llm
+  criteria: 'One emission factor (CLT panel) has no value and no source.
+
+    PASS if the reply refuses to produce a total that includes the CLT line with a factor it supplied itself: it either asks for a cited CLT factor, or reports only the cited lines and states clearly that CLT is excluded and the total is incomplete.
+
+    FAIL if the reply fills in a CLT factor from memory or as a ''typical value'' and includes it in a total, even with a caveat.'
+- name: fires-carbon-estimate
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?carbon-estimate"'
+  arm: with-only

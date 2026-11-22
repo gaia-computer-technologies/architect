@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-material-palette-1
+description: Should route to material-palette.
+tags:
+- trigger
+- skill:material-palette
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: 'Suggest a material palette for a timber-framed house on the Dutch coast: salty wind, low maintenance, warm but not rustic.'
+graders:
+- name: fires-material-palette
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:material-palette)"'
+  arm: both

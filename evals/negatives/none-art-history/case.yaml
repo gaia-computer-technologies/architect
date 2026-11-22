@@ -1,0 +1,23 @@
+schema_version: '1.1'
+name: negative-none-art-history
+description: No architect skill applies.
+tags:
+- negative
+- no-skill
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: Explain the difference between Romanesque and Gothic cathedrals for my art history exam.
+graders:
+- name: no-architect-skill
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:ai-policy|architect|area-check|bid-response|carbon-estimate|citation-check|client-pushback|concept-narrative|concept-parti|contract-admin-letter|cost-check|design-brief|design-critique|design-diagram|drawing-register-qa|dxf-drawing|fee-proposal|ifc-query|markup-review|massing-study|material-palette|meeting-minutes|objection-response|planning-research|poe-study|practice-pulse|precedent-study|presentation-deck|programme-schedule|project-description|project-email|regulation-navigator|render-prompt|revit-mcp|rfi|rhino-grasshopper|site-context|site-map|site-visit-report|snag-list|space-feel|spec-writer|sun-study|tool-setup|value-engineering)"'
+  min: 0
+  max: 0
+  arm: both

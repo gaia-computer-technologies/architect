@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-ai-policy-1
+description: Should route to ai-policy.
+tags:
+- trigger
+- skill:ai-policy
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: We're a 9-person practice in Bristol and staff are already using ChatGPT and Midjourney on live projects. Can you draft an office AI-use policy we can adopt next month?
+graders:
+- name: fires-ai-policy
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:ai-policy)"'
+  arm: both

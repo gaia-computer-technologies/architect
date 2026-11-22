@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-drawing-register-qa-1
+description: Should route to drawing-register-qa.
+tags:
+- trigger
+- skill:drawing-register-qa
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: Before we issue the Stage 4 package, check the PDF title blocks against the transmittal. I want revision mismatches and any missing sheets.
+graders:
+- name: fires-drawing-register-qa
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:drawing-register-qa)"'
+  arm: both

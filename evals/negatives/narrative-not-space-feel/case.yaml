@@ -1,0 +1,29 @@
+schema_version: '1.1'
+name: negative-narrative-not-space-feel
+description: Should route to concept-narrative, not its neighbour space-feel.
+tags:
+- negative
+- neighbour
+- skill:concept-narrative
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: Write the 300-word competition statement arguing why our library is organised around one top-lit void. It's for the jury.
+graders:
+- name: fires-concept-narrative
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:concept-narrative)"'
+  arm: both
+- name: not-space-feel
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:space-feel)"'
+  min: 0
+  max: 0
+  arm: both

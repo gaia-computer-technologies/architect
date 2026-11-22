@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-objection-response-1
+description: Should route to objection-response.
+tags:
+- trigger
+- skill:objection-response
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: We've had 14 neighbour objections on our planning application, mostly about overlooking, parking and height. Group them by theme and draft responses.
+graders:
+- name: fires-objection-response
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:objection-response)"'
+  arm: both

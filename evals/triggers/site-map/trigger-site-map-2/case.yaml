@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-site-map-2
+description: Should route to site-map.
+tags:
+- trigger
+- skill:site-map
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: I need a context map base from OpenStreetMap for a site in Ghent, with a scale bar and north point.
+graders:
+- name: fires-site-map
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:site-map)"'
+  arm: both

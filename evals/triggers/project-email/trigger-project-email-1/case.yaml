@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-project-email-1
+description: Should route to project-email.
+tags:
+- trigger
+- skill:project-email
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: Draft an email chasing the structural engineer for the revised slab drawings that were due last Friday. Polite but firm.
+graders:
+- name: fires-project-email
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:project-email)"'
+  arm: both

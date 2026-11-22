@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-concept-parti-2
+description: Should route to concept-parti.
+tags:
+- trigger
+- skill:concept-parti
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: What's the big idea for this project? It's a riverside boathouse with a cafe and I keep producing diagrams with no conviction.
+graders:
+- name: fires-concept-parti
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:concept-parti)"'
+  arm: both

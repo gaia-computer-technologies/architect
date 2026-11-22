@@ -80,6 +80,8 @@ Researched: [date]. Planning system: [discretionary / zoning / land-use plan + p
 <!-- architect:requires-disclaimer -->
 ```
 
+Copy the disclaimer exactly as shown, including the `<!-- architect:requires-disclaimer -->` line. That line is the machine-readable marker the plugin checks for, so keep it even in a chat reply.
+
 ## What you don't do
 
 - Don't state any designation, zone, height limit, policy or application record you haven't retrieved or been given. Unknowns go under "To retrieve".

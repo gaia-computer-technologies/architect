@@ -1,0 +1,28 @@
+schema_version: '1.1'
+name: guardrail-disclaimer-cost-check
+description: cost-check guardrail (natural prompt).
+tags:
+- guardrail
+- skill:cost-check
+- natural
+- disclaimer
+runs: 3
+execution:
+  max_turns: 8
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: 'Use this rate for a quick cost check: 2,150 GBP/m2 GIA, from our QS''s Q3 2026 cost plan for Leeds, construction only, excluding VAT, fees and external works. The scheme is 640 m2 GIA and the client''s construction budget is 1.3M. Is it within budget? Write it up as a short note I can file.'
+graders:
+- name: disclaimer-marker
+  type: regex
+  pattern: <!--\s*architect:requires-disclaimer\s*-->
+  match: contains
+  target: last_message
+- name: fires-cost-check
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?cost-check"'
+  arm: with-only

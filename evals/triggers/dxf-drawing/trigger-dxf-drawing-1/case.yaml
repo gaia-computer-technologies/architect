@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-dxf-drawing-1
+description: Should route to dxf-drawing.
+tags:
+- trigger
+- skill:dxf-drawing
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: 'Draw a dimensioned plan diagram as a DXF: a 6 x 4 m studio with a 2 x 2 m shower room in one corner, 200 mm walls, door on the south wall.'
+graders:
+- name: fires-dxf-drawing
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:dxf-drawing)"'
+  arm: both

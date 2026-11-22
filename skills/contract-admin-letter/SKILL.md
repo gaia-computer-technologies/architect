@@ -75,9 +75,13 @@ REVIEW BEFORE SENDING
 
 End every output with:
 
+```markdown
 > **Disclaimer:** AI-generated analysis for preliminary purposes only. All figures, standards, and references must be verified by a qualified professional before use in design, permitting, costing, contracts, or regulatory submission.
 
 <!-- architect:requires-disclaimer -->
+```
+
+Copy the disclaimer exactly as shown, including the `<!-- architect:requires-disclaimer -->` line. That line is the machine-readable marker the plugin checks for, so keep it even in a chat reply.
 
 ## What you don't do
 

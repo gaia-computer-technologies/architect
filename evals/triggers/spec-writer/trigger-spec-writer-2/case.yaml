@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-spec-writer-2
+description: Should route to spec-writer.
+tags:
+- trigger
+- skill:spec-writer
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: Find three alternatives to the specified triple-glazed timber window and put them in a comparison table with performance and sources.
+graders:
+- name: fires-spec-writer
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:spec-writer)"'
+  arm: both

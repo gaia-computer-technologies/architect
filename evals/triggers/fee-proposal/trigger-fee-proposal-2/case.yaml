@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-fee-proposal-2
+description: Should route to fee-proposal.
+tags:
+- trigger
+- skill:fee-proposal
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: Put together a scope of services by stage and a deliverables matrix for a 2.5M euro school refurbishment, using the HOAI Leistungsphasen, and help me work out the fee.
+graders:
+- name: fires-fee-proposal
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:fee-proposal)"'
+  arm: both

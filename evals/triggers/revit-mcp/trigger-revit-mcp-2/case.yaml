@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-revit-mcp-2
+description: Should route to revit-mcp.
+tags:
+- trigger
+- skill:revit-mcp
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: Write a pyRevit script to batch rename all sheets from the 'A-' prefix to 'AR-'.
+graders:
+- name: fires-revit-mcp
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:revit-mcp)"'
+  arm: both

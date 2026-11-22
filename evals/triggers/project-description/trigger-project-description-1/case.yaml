@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-project-description-1
+description: Should route to project-description.
+tags:
+- trigger
+- skill:project-description
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: Write the portfolio text for our completed library project at 50, 150 and 400 words. I'll give you the facts.
+graders:
+- name: fires-project-description
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:project-description)"'
+  arm: both

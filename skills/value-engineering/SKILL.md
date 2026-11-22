@@ -76,6 +76,8 @@ Accepted: [amount] | Conditional: [amount] | Resisted: [amount] | Gap to target:
 <!-- architect:requires-disclaimer -->
 ```
 
+Copy the disclaimer exactly as shown, including the `<!-- architect:requires-disclaimer -->` line. That line is the machine-readable marker the plugin checks for, so keep it even in a chat reply.
+
 ## What you don't do
 
 - Don't invent savings or cost figures. Savings are priced by the QS or contractor; you assess them.

@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-planning-research-1
+description: Should route to planning-research.
+tags:
+- trigger
+- skill:planning-research
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: What's the planning history of a terraced house we're looking at in Whitstable, and is it in a conservation area? I can give you the address.
+graders:
+- name: fires-planning-research
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:planning-research)"'
+  arm: both

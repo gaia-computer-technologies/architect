@@ -1,0 +1,15 @@
+{
+  "title": "Eval adjacency",
+  "area_unit": "m2",
+  "spaces": [
+    {"name": "Hall", "area": 100, "zone": "Shared", "level": 0},
+    {"name": "Kitchen", "area": 25, "zone": "Service", "level": 0},
+    {"name": "Library", "area": 64, "zone": "Quiet", "level": 1},
+    {"name": "Plant", "area": 16, "zone": "Service", "level": 1}
+  ],
+  "adjacencies": [
+    {"a": "Hall", "b": "Kitchen", "strength": "required"},
+    {"a": "Hall", "b": "Library", "strength": "desired"},
+    {"a": "Plant", "b": "Library", "strength": "avoid"}
+  ]
+}

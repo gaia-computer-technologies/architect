@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-architect-2
+description: Should route to architect.
+tags:
+- trigger
+- skill:architect
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: What can you actually do for an architecture practice? Give me the menu.
+graders:
+- name: fires-architect
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:architect)"'
+  arm: both

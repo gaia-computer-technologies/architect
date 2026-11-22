@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-concept-narrative-2
+description: Should route to concept-narrative.
+tags:
+- trigger
+- skill:concept-narrative
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: I need a concept rationale for the planning committee explaining why the scheme steps down towards the conservation area.
+graders:
+- name: fires-concept-narrative
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:concept-narrative)"'
+  arm: both

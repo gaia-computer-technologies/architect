@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-carbon-estimate-3
+description: Should route to carbon-estimate.
+tags:
+- trigger
+- skill:carbon-estimate
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: Which elements drive the carbon in our scheme? I can give you the quantity take-off from the IFC.
+graders:
+- name: fires-carbon-estimate
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:carbon-estimate)"'
+  arm: both

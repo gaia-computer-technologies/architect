@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-sun-study-1
+description: Should route to sun-study.
+tags:
+- trigger
+- skill:sun-study
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: Where will the sun be at noon on 21 December for a site in Amsterdam, and how long a shadow will a 12 m building cast?
+graders:
+- name: fires-sun-study
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:sun-study)"'
+  arm: both

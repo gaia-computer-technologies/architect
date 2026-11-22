@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-design-brief-1
+description: Should route to design-brief.
+tags:
+- trigger
+- skill:design-brief
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: 'Notes from the first client meeting: young family, two kids, both work from home, love cooking for friends, budget around 400k euro, plot on the edge of a village near Utrecht, want it to feel open but not exposed. Turn this into a proper design brief.'
+graders:
+- name: fires-design-brief
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:design-brief)"'
+  arm: both

@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-render-prompt-1
+description: Should route to render-prompt.
+tags:
+- trigger
+- skill:render-prompt
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: 'Write me a Midjourney prompt for this concept: a brick chapel in a birch forest at dusk, narrow slot windows, warm glow from inside.'
+graders:
+- name: fires-render-prompt
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:render-prompt)"'
+  arm: both

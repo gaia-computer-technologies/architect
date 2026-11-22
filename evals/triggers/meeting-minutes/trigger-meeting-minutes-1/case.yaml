@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-meeting-minutes-1
+description: Should route to meeting-minutes.
+tags:
+- trigger
+- skill:meeting-minutes
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: 'Turn my notes from this morning''s design team meeting into proper minutes with an action log. Attendees: me, Sarah (structures), Tom (MEP). Slab depth agreed at 250. Tom to send riser sizes by Friday. Client still undecided on cladding. Next meeting 3 Dec.'
+graders:
+- name: fires-meeting-minutes
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:meeting-minutes)"'
+  arm: both

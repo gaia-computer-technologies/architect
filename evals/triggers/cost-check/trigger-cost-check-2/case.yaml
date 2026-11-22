@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-cost-check-2
+description: Should route to cost-check.
+tags:
+- trigger
+- skill:cost-check
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: Compare the build cost of option A (1,200 m2 GIA, steel frame) and option B (1,050 m2 GIA, CLT). Our QS gave us 2,300 and 2,550 GBP/m2, both Q2 2026, London.
+graders:
+- name: fires-cost-check
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:cost-check)"'
+  arm: both

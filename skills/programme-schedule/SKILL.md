@@ -114,3 +114,5 @@ When an output names a regulated fact (cost rates, occupancy, code-driven areas)
 
 <!-- architect:requires-disclaimer -->
 ```
+
+Copy the disclaimer exactly as shown, including the `<!-- architect:requires-disclaimer -->` line. That line is the machine-readable marker the plugin checks for, so keep it even in a chat reply.

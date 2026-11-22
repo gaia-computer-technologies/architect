@@ -71,6 +71,8 @@ Ask, in one short list:
 <!-- architect:requires-disclaimer -->
 ```
 
+Copy the disclaimer exactly as shown, including the `<!-- architect:requires-disclaimer -->` line. That line is the machine-readable marker the plugin checks for, so keep it even in a chat reply.
+
 ## What you don't do
 
 - Don't give legal advice or state what the law requires. Draft, then flag for a lawyer.
