@@ -127,52 +127,53 @@ flowchart TD
 ```mermaid
 %%{init: {"flowchart": {"nodeSpacing": 22, "rankSpacing": 36}}}%%
 flowchart LR
-    subgraph WIN["Win"]
+    subgraph USE["7 · In use"]
         direction TB
-        w1["fee-proposal"]
-        w2["bid-response"]
-        w3["project-description"]
+        u1["poe-study"]
     end
-    subgraph BRIEF["Brief and site"]
-        direction TB
-        b1["design-brief"]
-        b2["site-context"]
-        b3["planning-research"]
-        b4["site-map · sun-study"]
-    end
-    subgraph CON["Concept"]
-        direction TB
-        c1["concept-parti"]
-        c2["massing-study"]
-        c3["material-palette"]
-        c4["design-critique"]
-    end
-    subgraph PLAN["Planning"]
-        direction TB
-        p1["presentation-deck"]
-        p2["objection-response"]
-        p3["citation-check"]
-    end
-    subgraph TECH["Technical"]
-        direction TB
-        t1["spec-writer"]
-        t2["drawing-register-qa"]
-        t3["cost-check · carbon-estimate"]
-        t4["value-engineering"]
-    end
-    subgraph SITE["Construction"]
+    subgraph SITE["6 · Construction"]
         direction TB
         s1["meeting-minutes · rfi"]
         s2["site-visit-report"]
         s3["contract-admin-letter"]
         s4["snag-list"]
     end
-    subgraph USE["In use"]
+    subgraph TECH["5 · Technical"]
         direction TB
-        u1["poe-study"]
+        t1["spec-writer"]
+        t2["drawing-register-qa"]
+        t3["cost-check · carbon-estimate"]
+        t4["value-engineering"]
+    end
+    subgraph PLAN["4 · Planning"]
+        direction TB
+        p1["presentation-deck"]
+        p2["objection-response"]
+        p3["citation-check"]
+    end
+    subgraph CON["3 · Concept"]
+        direction TB
+        c1["concept-parti"]
+        c2["massing-study"]
+        c3["material-palette"]
+        c4["design-critique"]
+    end
+    subgraph BRIEF["2 · Brief and site"]
+        direction TB
+        b1["design-brief"]
+        b2["site-context"]
+        b3["planning-research"]
+        b4["site-map · sun-study"]
+    end
+    subgraph WIN["1 · Win"]
+        direction TB
+        w1["fee-proposal"]
+        w2["bid-response"]
+        w3["project-description"]
     end
 
-    WIN --> BRIEF --> CON --> PLAN --> TECH --> SITE --> USE
+    %% No links between stages: links make mermaid ignore each stage's direction.
+    %% Declared in reverse: mermaid stacks unlinked groups last-declared on top.
 
     classDef box fill:#ffffff,stroke:#000000,color:#000000
     class w1,w2,w3,b1,b2,b3,b4,c1,c2,c3,c4,p1,p2,p3,t1,t2,t3,t4,s1,s2,s3,s4,u1 box
@@ -192,7 +193,7 @@ The **project-architect** agent runs this arc and chains skills where the work c
 <details>
 <summary><b>Advanced: connect your tools</b>, BIM, CAD and boards over MCP</summary>
 
-Skills work on their own and get sharper with your software connected. `/architect:tool-setup` checks what is connected and walks through the rest. Solid lines are recommended routes; dashed lines are official but young, or can run code.
+Skills work on their own and get sharper with your software connected. `/architect:tool-setup` checks what is connected and walks through the rest. Solid lines are recommended routes; the dashed line is a beta route behind a paid tier; the dashed box needs no connection at all.
 
 ```mermaid
 %%{init: {"flowchart": {"nodeSpacing": 22, "rankSpacing": 44}}}%%
