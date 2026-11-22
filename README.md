@@ -1,46 +1,62 @@
-# Architect
+<div align="center">
 
-Open-source Agent Skills for the architect's whole working week, from the first client conversation to the post-occupancy survey.
+<img src="assets/hero.png" alt="/architect: Agent Skills for the architect's working week. Concept to completion. Every number shows its basis. Four outputs made by the skills: a figure-ground site map, a dimensioned DXF plan, a massing study, and an adjacency diagram." width="840">
 
-[![skills.sh](https://skills.sh/b/gaia-computer-technologies/architect)](https://skills.sh/gaia-computer-technologies/architect)
-[![validate](https://github.com/gaia-computer-technologies/architect/actions/workflows/validate.yml/badge.svg)](https://github.com/gaia-computer-technologies/architect/actions/workflows/validate.yml)
-[![License: MIT](https://img.shields.io/badge/license-MIT-black.svg)](LICENSE)
+<br/><br/>
+
+# Architect: open-source Agent Skills for architects
+
+The colleague who writes the brief, reads the site, draws the diagram, checks the drawing set, chases the RFIs and answers the objection, and tells you plainly what it cannot know.
+
+**From your coding agent:** install it ([one line per agent](#start-in-30-seconds)), then say "Hey Claude, turn these meeting notes into minutes and an action log."
 
 <!-- skill-count:45 -->
-**45 skills. 2 agents. 1 plugin.** Works in Claude Code, Claude Desktop and Cowork, and, through `npx skills`, in Cursor, Codex, GitHub Copilot, Gemini CLI, Windsurf and about 70 other agents.
+**45** skills · **12** tested scripts · **2** agents · **8** tool connectors · **70+** agents supported · **MIT**
+
+<br/>
+
+[![skills.sh](https://skills.sh/b/gaia-computer-technologies/architect)](https://skills.sh/gaia-computer-technologies/architect)
+[![GitHub stars](https://img.shields.io/github/stars/gaia-computer-technologies/architect?color=000000)](https://github.com/gaia-computer-technologies/architect/stargazers)
+![skills](https://img.shields.io/badge/skills-45-000000)
+![agents](https://img.shields.io/badge/works%20in-Claude%20%C2%B7%20Cursor%20%C2%B7%20Codex%20%C2%B7%20Copilot-000000)
+![license](https://img.shields.io/badge/license-MIT-000000)
+[![validate](https://github.com/gaia-computer-technologies/architect/actions/workflows/validate.yml/badge.svg)](https://github.com/gaia-computer-technologies/architect/actions/workflows/validate.yml)
+
+<br/>
+
+| `site-map`, Rotterdam from OpenStreetMap | `dxf-drawing`, a layered DXF with real dimensions | `sun-study`, solstices and equinoxes |
+|---|---|---|
+| ![Figure-ground of a Rotterdam block from OpenStreetMap, with scale bar, north arrow and ODbL credit](assets/gallery/site-map.png) | ![A dimensioned plan with three rooms labelled with their areas, a door swing and a north marker, previewed from the DXF](assets/gallery/dxf-drawing.png) | ![Sun-path diagram for Rotterdam with the June and December solstices and both equinoxes, hourly marks, and a not-a-compliance-calculation note](assets/gallery/sun-study.png) |
+| **`massing-study`**, feasibility yield from setbacks and height | **`design-diagram`**, adjacency sized by area | |
+| ![Axonometric massing study of five storeys on a site boundary, titled with storeys and gross floor area](assets/gallery/massing-study.png) | ![Bubble diagram of a primary school programme, circles sized by area, with required, desired and avoid links](assets/gallery/design-diagram.png) | Every image here was made by the skills' own scripts, from code alone, with no CAD licence. Each script prints the inputs and arithmetic behind its numbers. |
+
+</div>
 
 ---
 
-## What this is
+## What it is
 
-An assistant that works the way a good senior colleague does: it writes the brief, reads the site, draws the diagram, checks the drawing set, chases the RFIs, drafts the instruction, prices the option, answers the objection, and tells you plainly what it cannot know.
+Architect is a set of 45 [Agent Skills](https://agentskills.io) for the work architects actually do in a week: briefs and site reads, planning research and code navigation, drawings and models, specifications, cost and carbon, minutes and RFIs, site reports and contract letters, bids and fee proposals, and the hard conversations with clients, objectors and quantity surveyors.
 
-It is built on one rule, taken from what architects say goes wrong with AI: **discipline the model, don't just prompt it.** Every skill shows the basis of its numbers, refuses to fabricate a precedent, code clause, product, appeal decision or citation, says "appears consistent with ... (verify)" instead of "complies", and names the professional who must check anything regulated. Where a number can be computed from your own file, a script computes it and prints its inputs.
+It is built on one rule, taken from what architects say goes wrong with AI: **discipline the model, don't just prompt it.** A wrong answer stated confidently is worse than a gap that is flagged.
 
-Nothing assumes a home country. Skills ask for your jurisdiction, code edition and contract form and work with RIBA, AIA, HOAI and other stage systems, JCT, NEC, AIA, FIDIC and local forms, NBS, MasterFormat and NATSPEC.
+It drafts, computes and checks. It does not certify, sign off, or replace a qualified professional, and it says so in the output whenever that matters.
 
-## Install
+## Start in 30 seconds
 
-**Claude Code (plugin, with agents and guardrail hook):**
+| Where you work | Run this |
+|---|---|
+| Claude Code, plugin (skills, agents, guardrail hook) | `claude plugin marketplace add gaia-computer-technologies/architect`, then `claude plugin install architect@gaia` |
+| Cursor, Codex, GitHub Copilot, Gemini CLI, Windsurf and about 70 more | `npx skills add gaia-computer-technologies/architect` |
+| Claude Desktop, claude.ai, Cowork | Customize → Plugins → add marketplace from GitHub → `gaia-computer-technologies/architect` |
+| Only a few skills | `npx skills add gaia-computer-technologies/architect --skill meeting-minutes --skill rfi` |
 
-```bash
-claude plugin marketplace add gaia-computer-technologies/architect
-claude plugin install architect@gaia
-```
+Then ask in plain words ("draft the RFI log from these emails", "make a figure-ground for this address", "check this drawing set against the register"), or open the menu with `/architect:architect` (plugin) or `/architect` (skills install).
 
-Skills then appear as `/architect:<skill>`, and Claude invokes them automatically when a request matches. Start with `/architect:architect` for the menu.
+<details>
+<summary><b>Upgrading from <code>concept-design@gaia-ai-architect</code></b></summary>
 
-**Any agent (Cursor, Codex, Copilot, Gemini CLI, Windsurf, Claude Code and more):**
-
-```bash
-npx skills add gaia-computer-technologies/architect
-```
-
-Pick all skills or a few with `--skill <name>`. Installed this way, skills are un-namespaced (`/design-brief`, and `/architect` for the menu); agents and the hook are Claude-plugin features and don't come along.
-
-**Claude Desktop and claude.ai:** Customize → Plugins → add marketplace from GitHub → `gaia-computer-technologies/architect`.
-
-**Upgrading from `concept-design@gaia-ai-architect`:** the plugin is now `architect` in the `gaia` marketplace.
+The plugin is now `architect` in the `gaia` marketplace, and commands moved from `/concept-design:<skill>` to `/architect:<skill>`.
 
 ```bash
 claude plugin marketplace remove gaia-ai-architect
@@ -48,146 +64,267 @@ claude plugin marketplace add gaia-computer-technologies/architect
 claude plugin install architect@gaia
 ```
 
-## The skills
+</details>
 
-Commands are shown in plugin form. "Script" means the skill ships tested Python that computes the result from your files (`uv run` installs its dependencies). "Flagged" means outputs that state regulated facts end with a verification disclaimer.
+## What it does
 
-### Start here
+```mermaid
+flowchart LR
+    U["You or<br/>your agent"] --> A(("Architect<br/>45 skills"))
 
-| Skill | Command | What it does |
+    A --> R["Research<br/>site, planning, code"]
+    A --> D["Drawings and models<br/>DXF, diagrams, BIM"]
+    A --> W["Documents<br/>specs, minutes, RFIs"]
+    A --> C["Challenges<br/>objections, VE, clients"]
+
+    R & D & W & C --> O[["Output<br/>basis shown"]]
+
+    O --> F["Files<br/>DXF, SVG, glTF, CSV"]
+    O --> T["Text<br/>letters, reports, bids"]
+    O --> V["To verify<br/>named professional"]
+    V -. "you check" .-> O
+
+    classDef core fill:#000000,stroke:#000000,color:#ffffff
+    classDef box fill:#ffffff,stroke:#000000,color:#000000
+    class A core
+    class U,R,D,W,C,O,F,T,V box
+```
+
+## How a skill answers
+
+Every skill follows the same discipline. This is the part that makes it safe to use on real projects:
+
+```mermaid
+%%{init: {"flowchart": {"nodeSpacing": 26, "rankSpacing": 40}}}%%
+flowchart TD
+    Q["Your request"] --> J{"Depends on<br/>jurisdiction?"}
+    J -- "yes" --> ASK["Ask: country, code edition,<br/>contract form, date"]
+    J -- "no" --> N
+    ASK --> N{"Can it be computed<br/>from your file?"}
+    N -- "yes" --> S["Run the script<br/>print inputs and arithmetic"]
+    N -- "no" --> SRC{"Is the source<br/>supplied or retrievable?"}
+    SRC -- "yes" --> CITE["Quote it<br/>name source and date"]
+    SRC -- "no" --> MAP["Say where to look<br/>not an answer"]
+    S & CITE --> OUT[["Answer<br/>appears consistent with ... verify"]]
+    MAP --> OUT
+    OUT --> FLAG["Regulated claim?<br/>disclaimer + who confirms"]
+
+    classDef core fill:#000000,stroke:#000000,color:#ffffff
+    classDef box fill:#ffffff,stroke:#000000,color:#000000
+    class OUT core
+    class Q,J,ASK,N,S,SRC,CITE,MAP,FLAG box
+```
+
+- **Show the basis of every number.** Measured, convention, or judgement, and which.
+- **Never fabricate** a precedent, appeal decision, code clause, product, benchmark, person or project.
+- **"Appears consistent with ... (verify)"**, never "complies". No structural, fire, accessibility, code or contractual rulings.
+- **No home country.** RIBA, AIA and HOAI stages; JCT, NEC, AIA, FIDIC and local contracts; NBS, MasterFormat and NATSPEC.
+- **Safe writes.** Model connectors default to read-only and show a dry run before any edit.
+
+<details>
+<summary><b>Advanced: a whole project</b>, which skills come in at which stage</summary>
+
+```mermaid
+%%{init: {"flowchart": {"nodeSpacing": 22, "rankSpacing": 36}}}%%
+flowchart LR
+    subgraph WIN["Win"]
+        direction TB
+        w1["fee-proposal"]
+        w2["bid-response"]
+        w3["project-description"]
+    end
+    subgraph BRIEF["Brief and site"]
+        direction TB
+        b1["design-brief"]
+        b2["site-context"]
+        b3["planning-research"]
+        b4["site-map · sun-study"]
+    end
+    subgraph CON["Concept"]
+        direction TB
+        c1["concept-parti"]
+        c2["massing-study"]
+        c3["material-palette"]
+        c4["design-critique"]
+    end
+    subgraph PLAN["Planning"]
+        direction TB
+        p1["presentation-deck"]
+        p2["objection-response"]
+        p3["citation-check"]
+    end
+    subgraph TECH["Technical"]
+        direction TB
+        t1["spec-writer"]
+        t2["drawing-register-qa"]
+        t3["cost-check · carbon-estimate"]
+        t4["value-engineering"]
+    end
+    subgraph SITE["Construction"]
+        direction TB
+        s1["meeting-minutes · rfi"]
+        s2["site-visit-report"]
+        s3["contract-admin-letter"]
+        s4["snag-list"]
+    end
+    subgraph USE["In use"]
+        direction TB
+        u1["poe-study"]
+    end
+
+    WIN --> BRIEF --> CON --> PLAN --> TECH --> SITE --> USE
+
+    classDef box fill:#ffffff,stroke:#000000,color:#000000
+    class w1,w2,w3,b1,b2,b3,b4,c1,c2,c3,c4,p1,p2,p3,t1,t2,t3,t4,s1,s2,s3,s4,u1 box
+    style WIN fill:none,stroke:#000000,stroke-width:2px
+    style BRIEF fill:none,stroke:#000000,stroke-width:2px
+    style CON fill:none,stroke:#000000,stroke-width:2px
+    style PLAN fill:none,stroke:#000000,stroke-width:2px
+    style TECH fill:none,stroke:#000000,stroke-width:2px
+    style SITE fill:none,stroke:#000000,stroke-width:2px
+    style USE fill:none,stroke:#000000,stroke-width:2px
+```
+
+The **project-architect** agent runs this arc and chains skills where the work chains: an objection letter goes through `citation-check` before `objection-response`; a VE request goes to `cost-check` and `carbon-estimate` before `value-engineering`. The **concept-architect** agent runs the concept stage.
+
+</details>
+
+<details>
+<summary><b>Advanced: connect your tools</b>, BIM, CAD and boards over MCP</summary>
+
+Skills work on their own and get sharper with your software connected. `/architect:tool-setup` checks what is connected and walks through the rest. Solid lines are recommended routes; dashed lines are official but young, or can run code.
+
+```mermaid
+%%{init: {"flowchart": {"nodeSpacing": 22, "rankSpacing": 44}}}%%
+flowchart LR
+    A(("Architect"))
+
+    subgraph BIM["Models"]
+        direction TB
+        RH["Rhino / Grasshopper<br/>rhinomcp, RhinoAI"]
+        RV["Revit 2027.2<br/>Autodesk MCP, Read"]
+        AC["Archicad 30<br/>MCP beta, Tapir"]
+        IFC["IFC<br/>ifcmcp --no-execute"]
+        SU["SketchUp<br/>Trimble connector"]
+    end
+
+    subgraph DOC["Documents and boards"]
+        direction TB
+        BB["Bluebeam<br/>Revu MCP"]
+        MF["Miro, Figma<br/>official MCP"]
+        MP["Maps<br/>Mapbox, Google"]
+    end
+
+    subgraph CODE["No connection needed"]
+        direction TB
+        K1["ezdxf, IfcOpenShell"]
+        K2["OSMnx, shapely, trimesh"]
+        K3["pvlib, PyMuPDF"]
+    end
+
+    A --> RH & RV & IFC & SU
+    A -.-> AC
+    A --> BB & MF & MP
+    A --> CODE
+
+    classDef core fill:#000000,stroke:#000000,color:#ffffff
+    classDef box fill:#ffffff,stroke:#000000,color:#000000
+    class A core
+    class RH,RV,AC,IFC,SU,BB,MF,MP,K1,K2,K3 box
+    style BIM fill:none,stroke:#000000,stroke-width:2px
+    style DOC fill:none,stroke:#000000,stroke-width:2px
+    style CODE fill:none,stroke:#000000,stroke-width:2px,stroke-dasharray:6 4
+```
+
+| Software | Route | Watch out for |
 |---|---|---|
-| Architect | `/architect:architect` | The menu: routes any task to the right skill, suggests a sequence for multi-step work |
-
-### Concept
-
-| Skill | Command | What it does | |
-|---|---|---|---|
-| Design brief | `/architect:design-brief` | Turns a client conversation or loose notes into a structured brief | |
-| Site context | `/architect:site-context` | Turns supplied site facts into design moves; never invents site data | Flagged |
-| Programme schedule | `/architect:programme-schedule` | Builds or checks a schedule of accommodation with net-to-gross shown | Flagged |
-| Concept parti | `/architect:concept-parti` | Finds the organising idea, as two or three distinct directions | |
-| Material palette | `/architect:material-palette` | A cohesive, specifiable 3-5 material palette with ageing and detailing notes | |
-| Space feel | `/architect:space-feel` | Describes how a space feels: threshold, compression, light, sound | |
-| Concept narrative | `/architect:concept-narrative` | The design argument for a client, jury or planning board | |
-| Render prompt | `/architect:render-prompt` | Structured prompts for Midjourney, Nano Banana and ControlNet workflows | |
-| Precedent study | `/architect:precedent-study` | Verifiable case studies; flags every attribution, invents nothing | |
-| Design critique | `/architect:design-critique` | Red-teams a scheme against its own stated intent before a pin-up | |
-
-### Research and regulation
-
-| Skill | Command | What it does | |
-|---|---|---|---|
-| Planning research | `/architect:planning-research` | Planning history, designations and policy for a site, each item linked and dated | Flagged |
-| Regulation navigator | `/architect:regulation-navigator` | Finds the governing clause by jurisdiction, edition and adoption date; never from memory | Flagged |
-| Citation check | `/architect:citation-check` | Checks every reference in a document exists, says what is claimed, and is current | |
-| Site map | `/architect:site-map` | Figure-ground and context maps from OpenStreetMap, areas in a projected CRS, optional DXF | Script |
-| Sun study | `/architect:sun-study` | Sun path, altitude and azimuth, shadow lengths, EPW climate summary | Script, Flagged |
-
-### Drawings, models and tools
-
-| Skill | Command | What it does | |
-|---|---|---|---|
-| DXF drawing | `/architect:dxf-drawing` | Real layered, dimensioned DXF that opens in AutoCAD, Rhino or Vectorworks, plus a preview | Script |
-| Design diagram | `/architect:design-diagram` | Adjacency and bubble diagrams sized by area, stacking, zoning and circulation, as SVG | Script |
-| Massing study | `/architect:massing-study` | Feasibility massing and yield from setbacks, height, coverage and FAR; glTF/OBJ out | Script, Flagged |
-| Area check | `/architect:area-check` | Measures areas from DXF polylines, IFC spaces or CSV and checks them against the brief | Script, Flagged |
-| Rhino and Grasshopper | `/architect:rhino-grasshopper` | Models and scripts Rhino and Grasshopper via McNeel's RhinoAI or rhinomcp, units checked first | |
-| Revit | `/architect:revit-mcp` | Queries schedules, rooms, parameters and warnings via Autodesk's Revit MCP; dry-run before any write | |
-| IFC query | `/architect:ifc-query` | Read-only openBIM QA, schedules and quantities with IfcOpenShell; reports schema and query | Script, Flagged |
-| Tool setup | `/architect:tool-setup` | Connects the practice's software over MCP, with install steps, risk class and what each unlocks | |
-
-### Documents and QA
-
-| Skill | Command | What it does | |
-|---|---|---|---|
-| Drawing register QA | `/architect:drawing-register-qa` | Reads title blocks from a PDF set and checks them against the register; flags sheets with no text layer | Script |
-| Markup review | `/architect:markup-review` | Collates PDF or Bluebeam markups into a numbered comment-response schedule | Script |
-| Spec writer | `/architect:spec-writer` | Outline clauses in NBS, MasterFormat, NATSPEC or your system; product comparisons with sources | Flagged |
-
-### Cost and carbon
-
-| Skill | Command | What it does | |
-|---|---|---|---|
-| Cost check | `/architect:cost-check` | Order-of-magnitude cost with the rate source, date, location and a low/likely/high range | Flagged |
-| Carbon estimate | `/architect:carbon-estimate` | Early A1-A3 embodied carbon; refuses uncited factors, unit mismatches and mixed scopes | Script, Flagged |
-
-### Coordination
-
-| Skill | Command | What it does | |
-|---|---|---|---|
-| Meeting minutes | `/architect:meeting-minutes` | Transcript or notes into minutes and an owner-and-date action log | |
-| Project email | `/architect:project-email` | Drafts and replies in the practice's tone, with a check for accidental commitments | |
-| RFI | `/architect:rfi` | Drafts RFIs and responses tied to drawing references, keeps the log, spots hidden variations | Flagged |
-
-### Construction
-
-| Skill | Command | What it does | |
-|---|---|---|---|
-| Site visit report | `/architect:site-visit-report` | Photos and notes into a dated, numbered report that describes and never certifies | |
-| Snag list | `/architect:snag-list` | Snagging / punch list by area and trade, with printable HTML and status tracking | Script |
-| Contract admin letter | `/architect:contract-admin-letter` | Instructions, notices, EOT and variation letters against your contract form and clause; flags time-bars | Flagged |
-
-### Winning work and presenting
-
-| Skill | Command | What it does | |
-|---|---|---|---|
-| Fee proposal | `/architect:fee-proposal` | Scope by stage, deliverables matrix, fee built from hours and rates, cross-checked | Flagged |
-| Bid response | `/architect:bid-response` | Answers tenders against their criteria with a compliance matrix; never invents projects | |
-| Project description | `/architect:project-description` | Portfolio, award and press copy at 50, 150 and 400 words, from verified facts only | |
-| Presentation deck | `/architect:presentation-deck` | Slide-by-slide storyline and board layout for a client, jury or committee | |
-
-### Challenges
-
-| Skill | Command | What it does | |
-|---|---|---|---|
-| Objection response | `/architect:objection-response` | Groups objections by theme, checks their citations, drafts policy-tied responses | Flagged |
-| Value engineering | `/architect:value-engineering` | Weighs VE options on cost, quality, carbon, programme and intent; replies to the QS | Flagged |
-| Client pushback | `/architect:client-pushback` | Prepares a hard client conversation: options, consequences, a script, the follow-up email | |
-
-### Practice and in use
-
-| Skill | Command | What it does | |
-|---|---|---|---|
-| Practice pulse | `/architect:practice-pulse` | Fee burn, earned value, utilisation and forecasts from timesheet exports | Script |
-| AI policy | `/architect:ai-policy` | A practice AI-use policy and client disclosure note, with points for your lawyer and insurer | Flagged |
-| POE study | `/architect:poe-study` | Post-occupancy survey and interview design, and analysis of what comes back | |
-
-### Agents (Claude Code and Cowork)
-
-- **project-architect**: runs whole-project and practice work, chains skills (an objection goes through `citation-check` before `objection-response`), and stops at anything that needs a qualified professional.
-- **concept-architect**: runs the concept arc from vague idea to presentation-ready output, and knows when to stop.
-
-## Connect your tools
-
-Skills work on their own, and get sharper with your software connected over MCP. `/architect:tool-setup` checks what is connected and walks through the rest. As of November 2026:
-
-| Software | Route | Notes |
-|---|---|---|
-| Rhino / Grasshopper | McNeel RhinoAI (official), or rhinomcp | Official is young; rhinomcp is the most mature |
-| Revit | Autodesk Revit Public MCP (Revit 2027.2) | Use the Read server by default; Write is preview |
-| Archicad | Archicad 30 MCP (beta), or Tapir MCP | Official needs a Collaborate or Max subscription |
+| Rhino / Grasshopper | McNeel RhinoAI (official) or rhinomcp | Official is young; check document units first |
+| Revit | Autodesk Revit Public MCP (Revit 2027.2) | Use the Read server; Write is preview |
+| Archicad | Archicad 30 MCP (beta) or Tapir MCP | Official needs a Collaborate or Max subscription |
 | SketchUp | Trimble SketchUp connector | Needs a Trimble ID |
 | IFC / openBIM | IfcOpenShell `ifcmcp` | Run with `--no-execute` |
 | Bluebeam | Revu MCP | Revu 21.9+, Max plan |
-| Miro, Figma | Official MCP servers | Read-only by default for client boards |
+| Miro, Figma | Official MCP servers | Read-only by default on client boards |
 | Maps | Mapbox MCP, Google Maps Grounding Lite | Or OpenStreetMap from code via `site-map` |
 
-No connection? `dxf-drawing`, `ifc-query`, `site-map`, `sun-study`, `area-check` and `massing-study` produce real files from code alone.
+As of November 2026. Tool detail dates fast, so each connector skill keeps its own dated `references/tool-notes.md`.
 
-## Guardrails, by design
+</details>
 
-- **Rules** ([`rules/`](rules/)): voice, transparency and professional boundary. Each skill carries its own copy of what it needs, so it stays safe when installed on its own.
-- **An advisory hook** ([`hooks/`](hooks/)) notices when a written file asserts a regulated fact (code, occupancy, ratings, cost, carbon, contract entitlement) without the disclaimer marker, and reminds you. It never blocks; remove `hooks/hooks.json` to turn it off.
-- **Safe writes**: model connectors default to read-only and show a dry run of affected elements before any edit.
+## The 45 skills
 
-## Community
+Commands are in plugin form; drop the `architect:` prefix after an `npx skills` install. **Script** means the skill ships tested Python that computes the result from your files (`uv run` installs its dependencies). **Flagged** means outputs that state a regulated fact end with a verification disclaimer.
 
-For deep US and New York City due diligence, FF&E and EPD workflows, see [Arch Studio](https://github.com/AlpacaLabsLLC/skills-for-architects) by [ALPA](https://alpa.llc), whose open work inspired ours. The two are complementary. Architecture needs more open tools.
+| | Skill | What it does | |
+|---|---|---|---|
+| **Start** | [`architect`](skills/architect/SKILL.md) | The menu: routes any task to the right skill | |
+| **Concept** | [`design-brief`](skills/design-brief/SKILL.md) | A structured brief from a client conversation or loose notes | |
+| | [`site-context`](skills/site-context/SKILL.md) | Supplied site facts into design moves; never invents site data | Flagged |
+| | [`programme-schedule`](skills/programme-schedule/SKILL.md) | Schedule of accommodation with net-to-gross shown | Flagged |
+| | [`concept-parti`](skills/concept-parti/SKILL.md) | The organising idea, as two or three distinct directions | |
+| | [`material-palette`](skills/material-palette/SKILL.md) | A cohesive, specifiable 3-5 material palette | |
+| | [`space-feel`](skills/space-feel/SKILL.md) | How a space feels: threshold, compression, light, sound | |
+| | [`concept-narrative`](skills/concept-narrative/SKILL.md) | The design argument for a client, jury or planning board | |
+| | [`render-prompt`](skills/render-prompt/SKILL.md) | Prompts for Midjourney, Nano Banana and ControlNet workflows | |
+| | [`precedent-study`](skills/precedent-study/SKILL.md) | Verifiable case studies; flags every attribution | |
+| | [`design-critique`](skills/design-critique/SKILL.md) | Red-teams a scheme against its own intent before a pin-up | |
+| **Research** | [`planning-research`](skills/planning-research/SKILL.md) | Planning history, designations and policy, each item linked and dated | Flagged |
+| | [`regulation-navigator`](skills/regulation-navigator/SKILL.md) | The governing clause by jurisdiction, edition and date; never from memory | Flagged |
+| | [`citation-check`](skills/citation-check/SKILL.md) | Every reference checked: exists, says that, still current | |
+| | [`site-map`](skills/site-map/SKILL.md) | Figure-ground and context maps from OpenStreetMap, optional DXF | Script |
+| | [`sun-study`](skills/sun-study/SKILL.md) | Sun path, shadow lengths, EPW climate summary | Script, Flagged |
+| **Drawings and models** | [`dxf-drawing`](skills/dxf-drawing/SKILL.md) | Layered, dimensioned DXF for AutoCAD, Rhino or Vectorworks | Script |
+| | [`design-diagram`](skills/design-diagram/SKILL.md) | Adjacency, bubble, stacking, zoning and circulation diagrams | Script |
+| | [`massing-study`](skills/massing-study/SKILL.md) | Feasibility massing and yield; glTF and OBJ out | Script, Flagged |
+| | [`area-check`](skills/area-check/SKILL.md) | Areas from DXF, IFC or CSV, checked against the brief | Script, Flagged |
+| | [`rhino-grasshopper`](skills/rhino-grasshopper/SKILL.md) | Rhino and Grasshopper via MCP, units checked first | |
+| | [`revit-mcp`](skills/revit-mcp/SKILL.md) | Revit schedules, rooms, parameters; dry run before any write | |
+| | [`ifc-query`](skills/ifc-query/SKILL.md) | Read-only openBIM QA, schedules and quantities | Script, Flagged |
+| | [`tool-setup`](skills/tool-setup/SKILL.md) | Connects the practice's software, with the risk of each route | |
+| **Documents and QA** | [`drawing-register-qa`](skills/drawing-register-qa/SKILL.md) | Title blocks in a PDF set checked against the register | Script |
+| | [`markup-review`](skills/markup-review/SKILL.md) | PDF or Bluebeam markups into a comment-response schedule | Script |
+| | [`spec-writer`](skills/spec-writer/SKILL.md) | Outline clauses in NBS, MasterFormat, NATSPEC or your system | Flagged |
+| **Cost and carbon** | [`cost-check`](skills/cost-check/SKILL.md) | Order-of-magnitude cost with rate source, date and range | Flagged |
+| | [`carbon-estimate`](skills/carbon-estimate/SKILL.md) | Early A1-A3 embodied carbon; refuses uncited factors | Script, Flagged |
+| **Coordination** | [`meeting-minutes`](skills/meeting-minutes/SKILL.md) | Minutes and an owner-and-date action log | |
+| | [`project-email`](skills/project-email/SKILL.md) | Drafts and replies, with a check for accidental commitments | |
+| | [`rfi`](skills/rfi/SKILL.md) | RFIs and responses, logged; spots hidden variations | Flagged |
+| **Construction** | [`site-visit-report`](skills/site-visit-report/SKILL.md) | Dated, numbered reports that describe and never certify | |
+| | [`snag-list`](skills/snag-list/SKILL.md) | Snagging / punch lists with printable HTML and status | Script |
+| | [`contract-admin-letter`](skills/contract-admin-letter/SKILL.md) | Instructions, notices, EOT and variation letters; flags time-bars | Flagged |
+| **Winning work** | [`fee-proposal`](skills/fee-proposal/SKILL.md) | Scope by stage, fee built from hours and rates, cross-checked | Flagged |
+| | [`bid-response`](skills/bid-response/SKILL.md) | Tender answers against the criteria, with a compliance matrix | |
+| | [`project-description`](skills/project-description/SKILL.md) | Portfolio, award and press copy from verified facts | |
+| | [`presentation-deck`](skills/presentation-deck/SKILL.md) | Slide storyline and board layout for a client, jury or committee | |
+| **Challenges** | [`objection-response`](skills/objection-response/SKILL.md) | Objections grouped by theme, citations checked, responses drafted | Flagged |
+| | [`value-engineering`](skills/value-engineering/SKILL.md) | VE options weighed on cost, quality, carbon and intent | Flagged |
+| | [`client-pushback`](skills/client-pushback/SKILL.md) | A hard client conversation: options, script, follow-up email | |
+| **Practice** | [`practice-pulse`](skills/practice-pulse/SKILL.md) | Fee burn, earned value and utilisation from timesheets | Script |
+| | [`ai-policy`](skills/ai-policy/SKILL.md) | A practice AI-use policy and client disclosure note | Flagged |
+| **In use** | [`poe-study`](skills/poe-study/SKILL.md) | Post-occupancy survey design and analysis | |
+
+**Agents** (Claude Code and Cowork): **project-architect** for whole-project and practice work, **concept-architect** for the concept arc.
+
+## Why you can trust it
+
+- **Rules you can read.** Voice, transparency and professional boundary live in [`rules/`](rules/), and every skill carries its own copy, so it stays safe when installed alone.
+- **Numbers from your files, not from memory.** Twelve skills ship scripts that compute areas, yields, sun angles, sheet registers, carbon totals and fee burn, and print the arithmetic.
+- **An advisory hook** ([`hooks/`](hooks/)) notices when a written file asserts a regulated fact (code, occupancy, ratings, cost, carbon, contract entitlement) without the disclaimer marker, and reminds you. It never blocks.
+- **Checked on every push.** CI parses every skill against the Agent Skills spec, checks that the router, the skills.sh groups and this README list every skill, runs `shellcheck`, and fails if `npx skills` would skip a skill.
+
+## How it fits with other tools
+
+| Use | When |
+|---|---|
+| **Architect** (this) | Day-to-day work across the whole project, in any country, with BIM/CAD connectors and computed drawings |
+| [Arch Studio](https://github.com/AlpacaLabsLLC/skills-for-architects) by [ALPA](https://alpa.llc) | Deep US and New York City due diligence, zoning envelopes, FF&E and EPD workflows. Their open work inspired ours; the two complement each other |
+| A general chatbot on its own | Fine for wording. Not for code clauses: UpCodes reported generic models answering about a third of building-code questions correctly |
+| Your engineers, inspectors and lawyers | Anything structural, fire, accessibility, regulatory or contractual. Every skill says when |
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). Run `bash scripts/lint.sh` before opening a PR; CI runs it, `shellcheck`, and `npx skills add . --list` on every push.
+See [CONTRIBUTING.md](CONTRIBUTING.md). Run `bash scripts/lint.sh` before opening a PR. New skills follow the house rules: show the basis, never fabricate, no home country, one skill one job.
 
 ## License
 
-MIT, Gaia Computer Technologies, Inc. See [LICENSE](LICENSE).
+MIT, [Gaia Computer Technologies, Inc.](https://github.com/gaia-computer-technologies) See [LICENSE](LICENSE).

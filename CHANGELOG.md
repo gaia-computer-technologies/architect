@@ -41,6 +41,9 @@ The concept toolkit becomes an assistant for the architect's whole working week,
 - `scripts/check_skills.py`: strict spec checks (YAML, name rules, 1024-char descriptions, allowed keys, string metadata), self-containment, emoji ban, and that the router, `skills.sh.json` and README list every skill.
 - CI adds `npx skills add . --list` and fails if any skill would be skipped.
 
+### Docs
+- README rebuilt around real output: a hero image and gallery made by the skills' own scripts (`assets/`), mermaid diagrams for what it does, how a skill answers, the project arc, and tool connections, and a linked table of all 45 skills.
+
 ## [0.2.0] — 2026-07-23
 
 A structural and content overhaul: make the plugin actually load and install to spec,

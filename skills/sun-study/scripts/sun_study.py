@@ -148,7 +148,8 @@ def main() -> None:
 
     ax.set_title(f"Sun path, {args.lat:.3f}, {args.lon:.3f}  ({args.tz}, clock time)", fontsize=10, pad=18)
     ax.legend(loc="lower center", bbox_to_anchor=(0.5, -0.16), ncol=2, fontsize=7, frameon=False)
-    fig.text(0.5, -0.04, "Not a compliance calculation. Centre = overhead; rings = altitude. True north.",
+    # Below the two-row legend, not on top of it.
+    fig.text(0.5, -0.115, "Not a compliance calculation. Centre = overhead; rings = altitude. True north.",
              ha="center", fontsize=6.5, color="#444")
 
     if args.epw:

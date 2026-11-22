@@ -204,12 +204,16 @@ def main() -> None:
     # Axonometric
     fig = plt.figure(figsize=(8, 7), dpi=180)
     ax = fig.add_subplot(projection="3d")
+    # No triangle edges (they draw seams across faces); shading separates the
+    # faces and the slab gaps make each floor read.
     ax.plot_trisurf(mass.vertices[:, 0], mass.vertices[:, 1], mass.vertices[:, 2], triangles=mass.faces,
-                    color="#bdbdbd", edgecolor="#555", linewidth=0.15)
+                    color="#bdbdbd", edgecolor="none", linewidth=0, shade=True)
     ax.plot(*site.exterior.xy, zs=0, color="#000")
-    span = max(site.bounds[2] - site.bounds[0], site.bounds[3] - site.bounds[1], z)
-    ax.set_xlim(site.bounds[0], site.bounds[0] + span); ax.set_ylim(site.bounds[1], site.bounds[1] + span)
-    ax.set_zlim(0, span); ax.view_init(elev=30, azim=-60); ax.set_axis_off()
+    x0, y0, x1, y1 = site.bounds
+    ax.set_xlim(x0, x1); ax.set_ylim(y0, y1); ax.set_zlim(0, z)
+    # True proportions, so a tall block looks tall and a flat one flat (no empty cube).
+    ax.set_box_aspect((x1 - x0, y1 - y0, max(z, 1e-6)))
+    ax.view_init(elev=30, azim=-60); ax.set_axis_off()
     ax.set_title(f"{spec.get('name', 'Massing')} - {n} storeys, GFA {gfa:,.0f} m2", fontsize=10)
     fig.savefig(out.with_name(out.name + "_axo.png"), bbox_inches="tight", facecolor="#fff")
     plt.close(fig)
