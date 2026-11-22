@@ -1,0 +1,117 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Start here",
+      "description": "The router: maps any task to the right skill.",
+      "skills": [
+        "architect"
+      ]
+    },
+    {
+      "title": "Concept",
+      "description": "Briefs, sites, programme, the organising idea, materials, atmosphere, narrative, renders, precedents, critique.",
+      "skills": [
+        "design-brief",
+        "site-context",
+        "programme-schedule",
+        "concept-parti",
+        "material-palette",
+        "space-feel",
+        "concept-narrative",
+        "render-prompt",
+        "precedent-study",
+        "design-critique"
+      ]
+    },
+    {
+      "title": "Research and regulation",
+      "description": "Planning history, code clauses, citation checks, site maps and sun studies, always sourced and dated.",
+      "skills": [
+        "planning-research",
+        "regulation-navigator",
+        "citation-check",
+        "site-map",
+        "sun-study"
+      ]
+    },
+    {
+      "title": "Drawings, models and tools",
+      "description": "Real DXF drawings, diagrams, massing, area takeoffs, and connectors for Rhino, Revit and IFC.",
+      "skills": [
+        "dxf-drawing",
+        "design-diagram",
+        "massing-study",
+        "area-check",
+        "rhino-grasshopper",
+        "revit-mcp",
+        "ifc-query",
+        "tool-setup"
+      ]
+    },
+    {
+      "title": "Documents and QA",
+      "description": "Drawing registers, title-block checks, markup schedules, outline specifications.",
+      "skills": [
+        "drawing-register-qa",
+        "markup-review",
+        "spec-writer"
+      ]
+    },
+    {
+      "title": "Cost and carbon",
+      "description": "Order-of-magnitude checks with every rate and factor cited.",
+      "skills": [
+        "cost-check",
+        "carbon-estimate"
+      ]
+    },
+    {
+      "title": "Coordination",
+      "description": "Minutes, action logs, project correspondence, RFIs.",
+      "skills": [
+        "meeting-minutes",
+        "project-email",
+        "rfi"
+      ]
+    },
+    {
+      "title": "Construction",
+      "description": "Site reports, snagging, contract administration letters.",
+      "skills": [
+        "site-visit-report",
+        "snag-list",
+        "contract-admin-letter"
+      ]
+    },
+    {
+      "title": "Winning work",
+      "description": "Fee proposals, bids, project descriptions, presentation decks.",
+      "skills": [
+        "fee-proposal",
+        "bid-response",
+        "project-description",
+        "presentation-deck"
+      ]
+    },
+    {
+      "title": "Challenges",
+      "description": "Planning objections, value engineering, difficult client conversations.",
+      "skills": [
+        "objection-response",
+        "value-engineering",
+        "client-pushback"
+      ]
+    },
+    {
+      "title": "Practice and in use",
+      "description": "Fee burn and resourcing, an AI-use policy, post-occupancy evaluation.",
+      "skills": [
+        "practice-pulse",
+        "ai-policy",
+        "poe-study"
+      ]
+    }
+  ]
+}

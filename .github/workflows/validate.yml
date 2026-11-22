@@ -4,12 +4,30 @@ on:
   push:
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Structural lint (manifests, frontmatter, naming, counts)
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install checkers
+        run: pip install pyyaml
+      - name: Structural lint (manifests, strict skill frontmatter, router, counts)
         run: bash scripts/lint.sh
       - name: Shellcheck hook + lint scripts
-        run: shellcheck --severity=error scripts/lint.sh plugins/*/hooks/*.sh
+        run: shellcheck --severity=error scripts/lint.sh hooks/*.sh
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Every skill is discoverable by npx skills
+        env:
+          DISABLE_TELEMETRY: "1"
+        run: |
+          out="$(npx -y skills@1.9.0 add . --list 2>&1)"
+          echo "$out"
+          if echo "$out" | grep -qi "skipp"; then echo "npx skills skipped a skill"; exit 1; fi

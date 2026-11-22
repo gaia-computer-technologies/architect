@@ -3,6 +3,47 @@
 All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning is [SemVer](https://semver.org/).
 
+## [1.0.0] — 2026-11-22
+
+The concept toolkit becomes an assistant for the architect's whole working week, renamed **architect**, and distributable to any agent.
+
+### Renamed
+- Repository `gaia-ai-architect` → `architect`. GitHub redirects the old URL; never recreate a repo with the old name.
+- Plugin `concept-design` → `architect` (commands are now `/architect:<skill>`); marketplace `gaia-ai-architect` → `gaia` (install with `architect@gaia`). `marketplace.json` carries `renames` so Claude Code can migrate the plugin name. To upgrade: `claude plugin marketplace remove gaia-ai-architect`, then add `gaia-computer-technologies/architect` and install `architect@gaia`.
+- Router skill `concept` → `architect` (`/architect` when installed with `npx skills`).
+
+### Changed (layout, for every marketplace)
+- The repo root is now the plugin: `.claude-plugin/plugin.json`, `skills/`, `agents/`, `hooks/`, `rules/` at the top level; the marketplace entry uses `source: "./"`. One real `skills/` folder, no symlinks, so the same tree works for the Claude plugin marketplace, the Anthropic plugin directory, `npx skills` / skills.sh, Codex, Cursor and Copilot.
+- Every skill is self-contained: no links outside its folder, the disclaimer block inline where needed, because `npx skills` installs one folder at a time.
+- Frontmatter follows the Agent Skills spec only (`name`, `description`, `license`, `metadata`).
+- Added `skills.sh.json` to group skills on the skills.sh repo page.
+- Disclaimer marker is now `<!-- architect:requires-disclaimer -->`; the hook still accepts the old `concept-design:` marker and now also catches €/m² and contract-entitlement language.
+
+### Fixed
+- `concept-narrative` and `precedent-study` had descriptions that were not valid YAML (an unquoted `: `), so `npx skills` and strict parsers silently skipped them. Quoted; the lint now parses every frontmatter as strict YAML.
+- Removed links to gaia.computer and Gaia Studio, which no longer serve those pages. `render-prompt` now points to ControlNet and in-CAD renderers for geometry-locked renders.
+- License holder corrected to Gaia Computer Technologies, Inc.
+
+### Added (11 → 45 skills)
+- **Research and regulation:** `planning-research`, `regulation-navigator`, `citation-check`, `site-map` (script), `sun-study` (script).
+- **Drawings, models and tools:** `dxf-drawing` (script), `design-diagram` (script), `massing-study` (script), `area-check` (script), `rhino-grasshopper`, `revit-mcp`, `ifc-query` (script), `tool-setup`.
+- **Documents and QA:** `drawing-register-qa` (script), `markup-review` (script), `spec-writer`.
+- **Cost and carbon:** `cost-check`, `carbon-estimate` (script).
+- **Coordination:** `meeting-minutes`, `project-email`, `rfi`.
+- **Construction:** `site-visit-report`, `snag-list` (script), `contract-admin-letter`.
+- **Winning work and presenting:** `fee-proposal`, `bid-response`, `project-description`, `presentation-deck`.
+- **Challenges:** `objection-response`, `value-engineering`, `client-pushback`.
+- **Practice and in use:** `practice-pulse` (script), `ai-policy`, `poe-study`.
+- **Agent:** `project-architect`, for whole-project and practice work; `concept-architect` keeps the concept arc.
+- Scripts carry PEP 723 headers (`uv run` installs dependencies), print their inputs and basis, and refuse bad input rather than guess. Each was run against a fixture before release.
+
+### Infrastructure
+- `scripts/check_skills.py`: strict spec checks (YAML, name rules, 1024-char descriptions, allowed keys, string metadata), self-containment, emoji ban, and that the router, `skills.sh.json` and README list every skill.
+- CI adds `npx skills add . --list` and fails if any skill would be skipped.
+
+### Docs
+- README rebuilt around real output: a hero image and gallery made by the skills' own scripts (`assets/`), mermaid diagrams for what it does, how a skill answers, the project arc, and tool connections, and a linked table of all 45 skills.
+
 ## [0.2.0] — 2026-07-23
 
 A structural and content overhaul: make the plugin actually load and install to spec,
