@@ -1,0 +1,12 @@
+{
+  "units": "m",
+  "title": "Ground floor - option A",
+  "rooms": [
+    {"name": "Living", "polygon": [[0,0],[6,0],[6,4.5],[0,4.5]], "expected_area": 27.0},
+    {"name": "Kitchen", "polygon": [[6,0],[9.5,0],[9.5,4.5],[6,4.5]], "expected_area": 15.75},
+    {"name": "Bedroom", "polygon": [[0,4.5],[5,4.5],[5,8],[0,8]], "expected_area": 17.5}
+  ],
+  "openings": [{"type": "door", "at": [3,4.5], "width": 0.9, "angle": 0}],
+  "dimensions": [{"from": [0,0], "to": [9.5,0], "offset": -0.8}, {"from": [0,0], "to": [0,8], "offset": -0.8}],
+  "texts": [{"text": "N", "at": [10.5, 7.5], "height": 0.4}]
+}
