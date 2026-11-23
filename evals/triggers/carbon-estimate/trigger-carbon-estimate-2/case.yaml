@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-carbon-estimate-2
+description: Should route to carbon-estimate.
+tags:
+- trigger
+- skill:carbon-estimate
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: What's the upfront carbon of this scheme in kgCO2e per m2, and are we anywhere near the RIBA 2030 target? I have quantities from the cost plan.
+graders:
+- name: fires-carbon-estimate
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:carbon-estimate)"'
+  arm: both

@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-design-critique-1
+description: Should route to design-critique.
+tags:
+- trigger
+- skill:design-critique
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: Pin-up on Friday. My courtyard housing block is meant to make the courtyard the social heart, but every entrance faces the street. Poke holes in the scheme.
+graders:
+- name: fires-design-critique
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:design-critique)"'
+  arm: both

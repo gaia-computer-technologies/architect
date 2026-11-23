@@ -80,6 +80,8 @@ Ask for all four before going further:
 <!-- architect:requires-disclaimer -->
 ```
 
+Copy the disclaimer exactly as shown, including the `<!-- architect:requires-disclaimer -->` line. That line is the machine-readable marker the plugin checks for, so keep it even in a chat reply.
+
 ## What you don't do
 
 - Don't quote, number, or paraphrase a clause from memory. Supplied or retrieved, with the source named, or it isn't stated.

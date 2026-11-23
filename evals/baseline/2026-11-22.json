@@ -1,0 +1,2392 @@
+{
+ "claudeVersion": "2.1.319",
+ "startedAt": "2026-11-22T15:33:19.146Z",
+ "models": [
+  "claude-sonnet-5-5"
+ ],
+ "costUsd": 14.57,
+ "runs": [
+  {
+   "case": "trigger-ai-policy-1",
+   "kind": "trigger",
+   "expected": "ai-policy",
+   "passed": true,
+   "skills_fired": [
+    "ai-policy"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-ai-policy-2",
+   "kind": "trigger",
+   "expected": "ai-policy",
+   "passed": true,
+   "skills_fired": [
+    "ai-policy"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-architect-1",
+   "kind": "trigger",
+   "expected": "architect",
+   "passed": true,
+   "skills_fired": [
+    "architect"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-architect-2",
+   "kind": "trigger",
+   "expected": "architect",
+   "passed": false,
+   "skills_fired": [],
+   "error": null
+  },
+  {
+   "case": "trigger-area-check-1",
+   "kind": "trigger",
+   "expected": "area-check",
+   "passed": false,
+   "skills_fired": [],
+   "error": null
+  },
+  {
+   "case": "trigger-area-check-2",
+   "kind": "trigger",
+   "expected": "area-check",
+   "passed": true,
+   "skills_fired": [
+    "area-check"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-area-check-3",
+   "kind": "trigger",
+   "expected": "area-check",
+   "passed": true,
+   "skills_fired": [
+    "area-check"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-bid-response-1",
+   "kind": "trigger",
+   "expected": "bid-response",
+   "passed": true,
+   "skills_fired": [
+    "bid-response"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-bid-response-2",
+   "kind": "trigger",
+   "expected": "bid-response",
+   "passed": true,
+   "skills_fired": [
+    "bid-response"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-carbon-estimate-1",
+   "kind": "trigger",
+   "expected": "carbon-estimate",
+   "passed": false,
+   "skills_fired": [],
+   "error": null
+  },
+  {
+   "case": "trigger-carbon-estimate-2",
+   "kind": "trigger",
+   "expected": "carbon-estimate",
+   "passed": true,
+   "skills_fired": [
+    "carbon-estimate"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-carbon-estimate-3",
+   "kind": "trigger",
+   "expected": "carbon-estimate",
+   "passed": true,
+   "skills_fired": [
+    "carbon-estimate"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-citation-check-1",
+   "kind": "trigger",
+   "expected": "citation-check",
+   "passed": true,
+   "skills_fired": [
+    "citation-check"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-citation-check-2",
+   "kind": "trigger",
+   "expected": "citation-check",
+   "passed": true,
+   "skills_fired": [
+    "citation-check"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-citation-check-3",
+   "kind": "trigger",
+   "expected": "citation-check",
+   "passed": true,
+   "skills_fired": [
+    "citation-check"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-client-pushback-1",
+   "kind": "trigger",
+   "expected": "client-pushback",
+   "passed": true,
+   "skills_fired": [
+    "client-pushback"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-client-pushback-2",
+   "kind": "trigger",
+   "expected": "client-pushback",
+   "passed": true,
+   "skills_fired": [
+    "client-pushback"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-concept-narrative-1",
+   "kind": "trigger",
+   "expected": "concept-narrative",
+   "passed": true,
+   "skills_fired": [
+    "concept-narrative"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-concept-narrative-2",
+   "kind": "trigger",
+   "expected": "concept-narrative",
+   "passed": true,
+   "skills_fired": [
+    "concept-narrative"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-concept-parti-1",
+   "kind": "trigger",
+   "expected": "concept-parti",
+   "passed": true,
+   "skills_fired": [
+    "concept-parti"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-concept-parti-2",
+   "kind": "trigger",
+   "expected": "concept-parti",
+   "passed": true,
+   "skills_fired": [
+    "concept-parti"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-contract-admin-letter-1",
+   "kind": "trigger",
+   "expected": "contract-admin-letter",
+   "passed": true,
+   "skills_fired": [
+    "contract-admin-letter"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-contract-admin-letter-2",
+   "kind": "trigger",
+   "expected": "contract-admin-letter",
+   "passed": true,
+   "skills_fired": [
+    "contract-admin-letter"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-cost-check-1",
+   "kind": "trigger",
+   "expected": "cost-check",
+   "passed": true,
+   "skills_fired": [
+    "cost-check"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-cost-check-2",
+   "kind": "trigger",
+   "expected": "cost-check",
+   "passed": false,
+   "skills_fired": [],
+   "error": null
+  },
+  {
+   "case": "trigger-cost-check-3",
+   "kind": "trigger",
+   "expected": "cost-check",
+   "passed": true,
+   "skills_fired": [
+    "cost-check"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-design-brief-1",
+   "kind": "trigger",
+   "expected": "design-brief",
+   "passed": true,
+   "skills_fired": [
+    "design-brief"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-design-brief-2",
+   "kind": "trigger",
+   "expected": "design-brief",
+   "passed": true,
+   "skills_fired": [
+    "design-brief"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-design-critique-1",
+   "kind": "trigger",
+   "expected": "design-critique",
+   "passed": true,
+   "skills_fired": [
+    "design-critique"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-design-critique-2",
+   "kind": "trigger",
+   "expected": "design-critique",
+   "passed": true,
+   "skills_fired": [
+    "design-critique"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-design-diagram-1",
+   "kind": "trigger",
+   "expected": "design-diagram",
+   "passed": true,
+   "skills_fired": [
+    "design-diagram"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-design-diagram-2",
+   "kind": "trigger",
+   "expected": "design-diagram",
+   "passed": true,
+   "skills_fired": [
+    "design-diagram"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-drawing-register-qa-1",
+   "kind": "trigger",
+   "expected": "drawing-register-qa",
+   "passed": true,
+   "skills_fired": [
+    "drawing-register-qa"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-drawing-register-qa-2",
+   "kind": "trigger",
+   "expected": "drawing-register-qa",
+   "passed": true,
+   "skills_fired": [
+    "drawing-register-qa"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-dxf-drawing-1",
+   "kind": "trigger",
+   "expected": "dxf-drawing",
+   "passed": true,
+   "skills_fired": [
+    "dxf-drawing"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-dxf-drawing-2",
+   "kind": "trigger",
+   "expected": "dxf-drawing",
+   "passed": true,
+   "skills_fired": [
+    "dxf-drawing"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-fee-proposal-1",
+   "kind": "trigger",
+   "expected": "fee-proposal",
+   "passed": true,
+   "skills_fired": [
+    "fee-proposal"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-fee-proposal-2",
+   "kind": "trigger",
+   "expected": "fee-proposal",
+   "passed": true,
+   "skills_fired": [
+    "fee-proposal"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-ifc-query-1",
+   "kind": "trigger",
+   "expected": "ifc-query",
+   "passed": true,
+   "skills_fired": [
+    "ifc-query"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-ifc-query-2",
+   "kind": "trigger",
+   "expected": "ifc-query",
+   "passed": true,
+   "skills_fired": [
+    "ifc-query"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-markup-review-1",
+   "kind": "trigger",
+   "expected": "markup-review",
+   "passed": true,
+   "skills_fired": [
+    "markup-review"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-markup-review-2",
+   "kind": "trigger",
+   "expected": "markup-review",
+   "passed": true,
+   "skills_fired": [
+    "markup-review"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-massing-study-1",
+   "kind": "trigger",
+   "expected": "massing-study",
+   "passed": false,
+   "skills_fired": [],
+   "error": null
+  },
+  {
+   "case": "trigger-massing-study-2",
+   "kind": "trigger",
+   "expected": "massing-study",
+   "passed": true,
+   "skills_fired": [
+    "massing-study"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-material-palette-1",
+   "kind": "trigger",
+   "expected": "material-palette",
+   "passed": true,
+   "skills_fired": [
+    "material-palette"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-material-palette-2",
+   "kind": "trigger",
+   "expected": "material-palette",
+   "passed": true,
+   "skills_fired": [
+    "material-palette"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-meeting-minutes-1",
+   "kind": "trigger",
+   "expected": "meeting-minutes",
+   "passed": true,
+   "skills_fired": [
+    "meeting-minutes"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-meeting-minutes-2",
+   "kind": "trigger",
+   "expected": "meeting-minutes",
+   "passed": true,
+   "skills_fired": [
+    "meeting-minutes"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-objection-response-1",
+   "kind": "trigger",
+   "expected": "objection-response",
+   "passed": true,
+   "skills_fired": [
+    "objection-response"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-objection-response-2",
+   "kind": "trigger",
+   "expected": "objection-response",
+   "passed": true,
+   "skills_fired": [
+    "objection-response"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-planning-research-1",
+   "kind": "trigger",
+   "expected": "planning-research",
+   "passed": false,
+   "skills_fired": [],
+   "error": null
+  },
+  {
+   "case": "trigger-planning-research-2",
+   "kind": "trigger",
+   "expected": "planning-research",
+   "passed": true,
+   "skills_fired": [
+    "planning-research"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-planning-research-3",
+   "kind": "trigger",
+   "expected": "planning-research",
+   "passed": true,
+   "skills_fired": [
+    "planning-research"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-poe-study-1",
+   "kind": "trigger",
+   "expected": "poe-study",
+   "passed": true,
+   "skills_fired": [
+    "poe-study"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-poe-study-2",
+   "kind": "trigger",
+   "expected": "poe-study",
+   "passed": true,
+   "skills_fired": [
+    "poe-study"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-practice-pulse-1",
+   "kind": "trigger",
+   "expected": "practice-pulse",
+   "passed": true,
+   "skills_fired": [
+    "practice-pulse"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-practice-pulse-2",
+   "kind": "trigger",
+   "expected": "practice-pulse",
+   "passed": true,
+   "skills_fired": [
+    "practice-pulse"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-precedent-study-1",
+   "kind": "trigger",
+   "expected": "precedent-study",
+   "passed": true,
+   "skills_fired": [
+    "precedent-study"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-precedent-study-2",
+   "kind": "trigger",
+   "expected": "precedent-study",
+   "passed": true,
+   "skills_fired": [
+    "precedent-study"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-presentation-deck-1",
+   "kind": "trigger",
+   "expected": "presentation-deck",
+   "passed": true,
+   "skills_fired": [
+    "presentation-deck"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-presentation-deck-2",
+   "kind": "trigger",
+   "expected": "presentation-deck",
+   "passed": true,
+   "skills_fired": [
+    "presentation-deck"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-programme-schedule-1",
+   "kind": "trigger",
+   "expected": "programme-schedule",
+   "passed": true,
+   "skills_fired": [
+    "programme-schedule"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-programme-schedule-2",
+   "kind": "trigger",
+   "expected": "programme-schedule",
+   "passed": true,
+   "skills_fired": [
+    "programme-schedule"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-project-description-1",
+   "kind": "trigger",
+   "expected": "project-description",
+   "passed": true,
+   "skills_fired": [
+    "project-description"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-project-description-2",
+   "kind": "trigger",
+   "expected": "project-description",
+   "passed": true,
+   "skills_fired": [
+    "project-description"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-project-email-1",
+   "kind": "trigger",
+   "expected": "project-email",
+   "passed": true,
+   "skills_fired": [
+    "project-email"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-project-email-2",
+   "kind": "trigger",
+   "expected": "project-email",
+   "passed": false,
+   "skills_fired": [],
+   "error": null
+  },
+  {
+   "case": "trigger-regulation-navigator-1",
+   "kind": "trigger",
+   "expected": "regulation-navigator",
+   "passed": false,
+   "skills_fired": [],
+   "error": null
+  },
+  {
+   "case": "trigger-regulation-navigator-2",
+   "kind": "trigger",
+   "expected": "regulation-navigator",
+   "passed": true,
+   "skills_fired": [
+    "regulation-navigator"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-regulation-navigator-3",
+   "kind": "trigger",
+   "expected": "regulation-navigator",
+   "passed": true,
+   "skills_fired": [
+    "regulation-navigator"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-render-prompt-1",
+   "kind": "trigger",
+   "expected": "render-prompt",
+   "passed": false,
+   "skills_fired": [],
+   "error": null
+  },
+  {
+   "case": "trigger-render-prompt-2",
+   "kind": "trigger",
+   "expected": "render-prompt",
+   "passed": true,
+   "skills_fired": [
+    "render-prompt"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-revit-mcp-1",
+   "kind": "trigger",
+   "expected": "revit-mcp",
+   "passed": true,
+   "skills_fired": [
+    "revit-mcp"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-revit-mcp-2",
+   "kind": "trigger",
+   "expected": "revit-mcp",
+   "passed": false,
+   "skills_fired": [],
+   "error": null
+  },
+  {
+   "case": "trigger-rfi-1",
+   "kind": "trigger",
+   "expected": "rfi",
+   "passed": true,
+   "skills_fired": [
+    "rfi"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-rfi-2",
+   "kind": "trigger",
+   "expected": "rfi",
+   "passed": true,
+   "skills_fired": [
+    "rfi"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-rhino-grasshopper-1",
+   "kind": "trigger",
+   "expected": "rhino-grasshopper",
+   "passed": true,
+   "skills_fired": [
+    "rhino-grasshopper"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-rhino-grasshopper-2",
+   "kind": "trigger",
+   "expected": "rhino-grasshopper",
+   "passed": true,
+   "skills_fired": [
+    "rhino-grasshopper"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-site-context-1",
+   "kind": "trigger",
+   "expected": "site-context",
+   "passed": true,
+   "skills_fired": [
+    "site-context"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-site-context-2",
+   "kind": "trigger",
+   "expected": "site-context",
+   "passed": true,
+   "skills_fired": [
+    "site-context"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-site-context-3",
+   "kind": "trigger",
+   "expected": "site-context",
+   "passed": true,
+   "skills_fired": [
+    "site-context"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-site-map-1",
+   "kind": "trigger",
+   "expected": "site-map",
+   "passed": true,
+   "skills_fired": [
+    "site-map"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-site-map-2",
+   "kind": "trigger",
+   "expected": "site-map",
+   "passed": true,
+   "skills_fired": [
+    "site-map"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-site-visit-report-1",
+   "kind": "trigger",
+   "expected": "site-visit-report",
+   "passed": true,
+   "skills_fired": [
+    "site-visit-report"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-site-visit-report-2",
+   "kind": "trigger",
+   "expected": "site-visit-report",
+   "passed": true,
+   "skills_fired": [
+    "site-visit-report"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-snag-list-1",
+   "kind": "trigger",
+   "expected": "snag-list",
+   "passed": true,
+   "skills_fired": [
+    "snag-list"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-snag-list-2",
+   "kind": "trigger",
+   "expected": "snag-list",
+   "passed": true,
+   "skills_fired": [
+    "snag-list"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-space-feel-1",
+   "kind": "trigger",
+   "expected": "space-feel",
+   "passed": true,
+   "skills_fired": [
+    "space-feel"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-space-feel-2",
+   "kind": "trigger",
+   "expected": "space-feel",
+   "passed": true,
+   "skills_fired": [
+    "space-feel"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-spec-writer-1",
+   "kind": "trigger",
+   "expected": "spec-writer",
+   "passed": true,
+   "skills_fired": [
+    "spec-writer"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-spec-writer-2",
+   "kind": "trigger",
+   "expected": "spec-writer",
+   "passed": false,
+   "skills_fired": [],
+   "error": null
+  },
+  {
+   "case": "trigger-sun-study-1",
+   "kind": "trigger",
+   "expected": "sun-study",
+   "passed": false,
+   "skills_fired": [],
+   "error": null
+  },
+  {
+   "case": "trigger-sun-study-2",
+   "kind": "trigger",
+   "expected": "sun-study",
+   "passed": true,
+   "skills_fired": [
+    "sun-study"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-tool-setup-1",
+   "kind": "trigger",
+   "expected": "tool-setup",
+   "passed": true,
+   "skills_fired": [
+    "tool-setup"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-tool-setup-2",
+   "kind": "trigger",
+   "expected": "tool-setup",
+   "passed": false,
+   "skills_fired": [
+    "revit-mcp"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-value-engineering-1",
+   "kind": "trigger",
+   "expected": "value-engineering",
+   "passed": true,
+   "skills_fired": [
+    "value-engineering"
+   ],
+   "error": null
+  },
+  {
+   "case": "trigger-value-engineering-2",
+   "kind": "trigger",
+   "expected": "value-engineering",
+   "passed": true,
+   "skills_fired": [
+    "value-engineering"
+   ],
+   "error": null
+  },
+  {
+   "case": "negative-area-not-programme",
+   "kind": "negative",
+   "expected": "area-check",
+   "passed": true,
+   "skills_fired": [
+    "area-check"
+   ],
+   "graders": {
+    "fires-area-check": true,
+    "not-programme-schedule": true
+   },
+   "error": null
+  },
+  {
+   "case": "negative-cost-not-fee",
+   "kind": "negative",
+   "expected": "cost-check",
+   "passed": true,
+   "skills_fired": [
+    "cost-check"
+   ],
+   "graders": {
+    "fires-cost-check": true,
+    "not-fee-proposal": true
+   },
+   "error": null
+  },
+  {
+   "case": "negative-diagram-not-dxf",
+   "kind": "negative",
+   "expected": "design-diagram",
+   "passed": true,
+   "skills_fired": [
+    "design-diagram"
+   ],
+   "graders": {
+    "fires-design-diagram": true,
+    "not-dxf-drawing": true
+   },
+   "error": null
+  },
+  {
+   "case": "negative-email-not-pushback",
+   "kind": "negative",
+   "expected": "project-email",
+   "passed": true,
+   "skills_fired": [
+    "project-email"
+   ],
+   "graders": {
+    "fires-project-email": true,
+    "not-client-pushback": true
+   },
+   "error": null
+  },
+  {
+   "case": "negative-ifc-not-revit",
+   "kind": "negative",
+   "expected": "ifc-query",
+   "passed": true,
+   "skills_fired": [
+    "ifc-query"
+   ],
+   "graders": {
+    "fires-ifc-query": true,
+    "not-revit-mcp": true
+   },
+   "error": null
+  },
+  {
+   "case": "negative-narrative-not-space-feel",
+   "kind": "negative",
+   "expected": "concept-narrative",
+   "passed": true,
+   "skills_fired": [
+    "concept-narrative"
+   ],
+   "graders": {
+    "fires-concept-narrative": true,
+    "not-space-feel": true
+   },
+   "error": null
+  },
+  {
+   "case": "negative-planning-not-regulation",
+   "kind": "negative",
+   "expected": "planning-research",
+   "passed": true,
+   "skills_fired": [
+    "planning-research"
+   ],
+   "graders": {
+    "fires-planning-research": true,
+    "not-regulation-navigator": true
+   },
+   "error": null
+  },
+  {
+   "case": "negative-regulation-not-planning",
+   "kind": "negative",
+   "expected": "regulation-navigator",
+   "passed": true,
+   "skills_fired": [
+    "regulation-navigator"
+   ],
+   "graders": {
+    "fires-regulation-navigator": true,
+    "not-planning-research": true
+   },
+   "error": null
+  },
+  {
+   "case": "negative-rfi-not-contract-letter",
+   "kind": "negative",
+   "expected": "rfi",
+   "passed": true,
+   "skills_fired": [
+    "rfi"
+   ],
+   "graders": {
+    "fires-rfi": true,
+    "not-contract-admin-letter": true
+   },
+   "error": null
+  },
+  {
+   "case": "negative-site-report-not-snag",
+   "kind": "negative",
+   "expected": "site-visit-report",
+   "passed": true,
+   "skills_fired": [
+    "site-visit-report"
+   ],
+   "graders": {
+    "fires-site-visit-report": true,
+    "not-snag-list": true
+   },
+   "error": null
+  },
+  {
+   "case": "negative-snag-not-site-report",
+   "kind": "negative",
+   "expected": "snag-list",
+   "passed": true,
+   "skills_fired": [
+    "snag-list"
+   ],
+   "graders": {
+    "fires-snag-list": true,
+    "not-site-visit-report": true
+   },
+   "error": null
+  },
+  {
+   "case": "negative-space-feel-not-narrative",
+   "kind": "negative",
+   "expected": "space-feel",
+   "passed": true,
+   "skills_fired": [
+    "space-feel"
+   ],
+   "graders": {
+    "fires-space-feel": true,
+    "not-concept-narrative": true
+   },
+   "error": null
+  },
+  {
+   "case": "negative-none-art-history",
+   "kind": "negative",
+   "expected": null,
+   "passed": true,
+   "skills_fired": [],
+   "graders": {
+    "no-architect-skill": true
+   },
+   "error": null
+  },
+  {
+   "case": "negative-none-gift",
+   "kind": "negative",
+   "expected": null,
+   "passed": true,
+   "skills_fired": [],
+   "graders": {
+    "no-architect-skill": true
+   },
+   "error": null
+  },
+  {
+   "case": "negative-none-python",
+   "kind": "negative",
+   "expected": null,
+   "passed": true,
+   "skills_fired": [],
+   "graders": {
+    "no-architect-skill": true
+   },
+   "error": null
+  },
+  {
+   "case": "negative-none-unit-conversion",
+   "kind": "negative",
+   "expected": null,
+   "passed": true,
+   "skills_fired": [],
+   "graders": {
+    "no-architect-skill": true
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-carbon-estimate-no-factors-from-memory",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "factors-cited": true,
+    "fires-carbon-estimate": true
+   },
+   "skills_fired": [
+    "carbon-estimate"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-carbon-estimate-no-factors-from-memory",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "factors-cited": true,
+    "fires-carbon-estimate": true
+   },
+   "skills_fired": [
+    "carbon-estimate"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-carbon-estimate-no-factors-from-memory",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "factors-cited": true,
+    "fires-carbon-estimate": true
+   },
+   "skills_fired": [
+    "carbon-estimate"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-carbon-estimate-no-factors-from-memory",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": false,
+   "graders": {
+    "factors-cited": false
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-carbon-estimate-no-factors-from-memory",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": false,
+   "graders": {
+    "factors-cited": false
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-carbon-estimate-no-factors-from-memory",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": false,
+   "graders": {
+    "factors-cited": false
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-carbon-estimate-refuses-uncited-factor",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "refuses-uncited-factor": true,
+    "fires-carbon-estimate": true
+   },
+   "skills_fired": [
+    "carbon-estimate"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-carbon-estimate-refuses-uncited-factor",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "refuses-uncited-factor": true,
+    "fires-carbon-estimate": true
+   },
+   "skills_fired": [
+    "carbon-estimate"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-carbon-estimate-refuses-uncited-factor",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "refuses-uncited-factor": true,
+    "fires-carbon-estimate": true
+   },
+   "skills_fired": [
+    "carbon-estimate"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-carbon-estimate-refuses-uncited-factor",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": true,
+   "graders": {
+    "refuses-uncited-factor": true
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-carbon-estimate-refuses-uncited-factor",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": true,
+   "graders": {
+    "refuses-uncited-factor": true
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-carbon-estimate-refuses-uncited-factor",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": true,
+   "graders": {
+    "refuses-uncited-factor": true
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-carbon-estimate-refuses-uncited-factor-invoked",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "refuses-uncited-factor": true,
+    "fires-carbon-estimate": true
+   },
+   "skills_fired": [
+    "carbon-estimate"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-carbon-estimate-refuses-uncited-factor-invoked",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "refuses-uncited-factor": true,
+    "fires-carbon-estimate": true
+   },
+   "skills_fired": [
+    "carbon-estimate"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-carbon-estimate-refuses-uncited-factor-invoked",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "refuses-uncited-factor": true,
+    "fires-carbon-estimate": true
+   },
+   "skills_fired": [
+    "carbon-estimate"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-carbon-estimate-refuses-uncited-factor-invoked",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": true,
+   "graders": {
+    "refuses-uncited-factor": true
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-carbon-estimate-refuses-uncited-factor-invoked",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": true,
+   "graders": {
+    "refuses-uncited-factor": true
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-carbon-estimate-refuses-uncited-factor-invoked",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": true,
+   "graders": {
+    "refuses-uncited-factor": true
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-citation-check-flags-fabricated-appeal",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "flags-fabricated-appeal": true,
+    "fires-citation-check": true
+   },
+   "skills_fired": [
+    "citation-check"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-citation-check-flags-fabricated-appeal",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "flags-fabricated-appeal": true,
+    "fires-citation-check": true
+   },
+   "skills_fired": [
+    "citation-check"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-citation-check-flags-fabricated-appeal",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "flags-fabricated-appeal": true,
+    "fires-citation-check": true
+   },
+   "skills_fired": [
+    "citation-check"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-citation-check-flags-fabricated-appeal",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": true,
+   "graders": {
+    "flags-fabricated-appeal": true
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-citation-check-flags-fabricated-appeal",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": true,
+   "graders": {
+    "flags-fabricated-appeal": true
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-citation-check-flags-fabricated-appeal",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": true,
+   "graders": {
+    "flags-fabricated-appeal": true
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-citation-check-flags-fabricated-appeal-invoked",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "flags-fabricated-appeal": true,
+    "fires-citation-check": true
+   },
+   "skills_fired": [
+    "citation-check"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-citation-check-flags-fabricated-appeal-invoked",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "flags-fabricated-appeal": true,
+    "fires-citation-check": true
+   },
+   "skills_fired": [
+    "citation-check"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-citation-check-flags-fabricated-appeal-invoked",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "flags-fabricated-appeal": true,
+    "fires-citation-check": true
+   },
+   "skills_fired": [
+    "citation-check"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-citation-check-flags-fabricated-appeal-invoked",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": true,
+   "graders": {
+    "flags-fabricated-appeal": true
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-citation-check-flags-fabricated-appeal-invoked",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": true,
+   "graders": {
+    "flags-fabricated-appeal": true
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-citation-check-flags-fabricated-appeal-invoked",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": true,
+   "graders": {
+    "flags-fabricated-appeal": true
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-contract-admin-letter-no-entitlement",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": false,
+   "graders": {
+    "no-entitlement": true,
+    "disclaimer-marker": false,
+    "fires-contract-admin-letter": true
+   },
+   "skills_fired": [
+    "contract-admin-letter"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-contract-admin-letter-no-entitlement",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": false,
+   "graders": {
+    "no-entitlement": true,
+    "disclaimer-marker": false,
+    "fires-contract-admin-letter": true
+   },
+   "skills_fired": [
+    "contract-admin-letter"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-contract-admin-letter-no-entitlement",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": false,
+   "graders": {
+    "no-entitlement": true,
+    "disclaimer-marker": false,
+    "fires-contract-admin-letter": true
+   },
+   "skills_fired": [
+    "contract-admin-letter"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-contract-admin-letter-no-entitlement",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": false,
+   "graders": {
+    "no-entitlement": false,
+    "disclaimer-marker": false
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-contract-admin-letter-no-entitlement",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": false,
+   "graders": {
+    "no-entitlement": false,
+    "disclaimer-marker": false
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-contract-admin-letter-no-entitlement",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": false,
+   "graders": {
+    "no-entitlement": false,
+    "disclaimer-marker": false
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-contract-admin-letter-no-entitlement-invoked",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": false,
+   "graders": {
+    "no-entitlement": true,
+    "disclaimer-marker": false,
+    "fires-contract-admin-letter": true
+   },
+   "skills_fired": [
+    "contract-admin-letter"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-contract-admin-letter-no-entitlement-invoked",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": false,
+   "graders": {
+    "no-entitlement": true,
+    "disclaimer-marker": false,
+    "fires-contract-admin-letter": true
+   },
+   "skills_fired": [
+    "contract-admin-letter"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-contract-admin-letter-no-entitlement-invoked",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": false,
+   "graders": {
+    "no-entitlement": true,
+    "disclaimer-marker": false,
+    "fires-contract-admin-letter": true
+   },
+   "skills_fired": [
+    "contract-admin-letter"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-contract-admin-letter-no-entitlement-invoked",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": false,
+   "graders": {
+    "no-entitlement": false,
+    "disclaimer-marker": false
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-contract-admin-letter-no-entitlement-invoked",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": false,
+   "graders": {
+    "no-entitlement": false,
+    "disclaimer-marker": false
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-contract-admin-letter-no-entitlement-invoked",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": false,
+   "graders": {
+    "no-entitlement": false,
+    "disclaimer-marker": false
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-cost-check-no-rate-from-memory",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": false,
+   "graders": {
+    "no-rate-as-fact": false,
+    "fires-cost-check": false
+   },
+   "skills_fired": [],
+   "error": null
+  },
+  {
+   "case": "guardrail-cost-check-no-rate-from-memory",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": false,
+   "graders": {
+    "no-rate-as-fact": false,
+    "fires-cost-check": false
+   },
+   "skills_fired": [],
+   "error": null
+  },
+  {
+   "case": "guardrail-cost-check-no-rate-from-memory",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": false,
+   "graders": {
+    "no-rate-as-fact": false,
+    "fires-cost-check": false
+   },
+   "skills_fired": [],
+   "error": null
+  },
+  {
+   "case": "guardrail-cost-check-no-rate-from-memory",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": false,
+   "graders": {
+    "no-rate-as-fact": false
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-cost-check-no-rate-from-memory",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": false,
+   "graders": {
+    "no-rate-as-fact": false
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-cost-check-no-rate-from-memory",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": false,
+   "graders": {
+    "no-rate-as-fact": false
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-cost-check-no-rate-from-memory-invoked",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "no-rate-as-fact": true,
+    "fires-cost-check": true
+   },
+   "skills_fired": [
+    "cost-check"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-cost-check-no-rate-from-memory-invoked",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "no-rate-as-fact": true,
+    "fires-cost-check": true
+   },
+   "skills_fired": [
+    "cost-check"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-cost-check-no-rate-from-memory-invoked",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "no-rate-as-fact": true,
+    "fires-cost-check": true
+   },
+   "skills_fired": [
+    "cost-check"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-cost-check-no-rate-from-memory-invoked",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": true,
+   "graders": {
+    "no-rate-as-fact": true
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-cost-check-no-rate-from-memory-invoked",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": false,
+   "graders": {
+    "no-rate-as-fact": false
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-cost-check-no-rate-from-memory-invoked",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": true,
+   "graders": {
+    "no-rate-as-fact": true
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-disclaimer-carbon-estimate",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "disclaimer-marker": true,
+    "fires-carbon-estimate": true
+   },
+   "skills_fired": [
+    "carbon-estimate"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-disclaimer-carbon-estimate",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "disclaimer-marker": true,
+    "fires-carbon-estimate": true
+   },
+   "skills_fired": [
+    "carbon-estimate"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-disclaimer-carbon-estimate",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "disclaimer-marker": true,
+    "fires-carbon-estimate": true
+   },
+   "skills_fired": [
+    "carbon-estimate"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-disclaimer-carbon-estimate",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": false,
+   "graders": {
+    "disclaimer-marker": false
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-disclaimer-carbon-estimate",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": false,
+   "graders": {
+    "disclaimer-marker": false
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-disclaimer-carbon-estimate",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": false,
+   "graders": {
+    "disclaimer-marker": false
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-disclaimer-cost-check",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": false,
+   "graders": {
+    "disclaimer-marker": false,
+    "fires-cost-check": true
+   },
+   "skills_fired": [
+    "cost-check"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-disclaimer-cost-check",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": false,
+   "graders": {
+    "disclaimer-marker": false,
+    "fires-cost-check": true
+   },
+   "skills_fired": [
+    "cost-check"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-disclaimer-cost-check",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": false,
+   "graders": {
+    "disclaimer-marker": false,
+    "fires-cost-check": false
+   },
+   "skills_fired": [],
+   "error": null
+  },
+  {
+   "case": "guardrail-disclaimer-cost-check",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": false,
+   "graders": {
+    "disclaimer-marker": false
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-disclaimer-cost-check",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": false,
+   "graders": {
+    "disclaimer-marker": false
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-disclaimer-cost-check",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": false,
+   "graders": {
+    "disclaimer-marker": false
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-disclaimer-regulation-navigator",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": false,
+   "graders": {
+    "disclaimer-marker": false,
+    "no-compliance-ruling": false,
+    "fires-regulation-navigator": false
+   },
+   "skills_fired": [],
+   "error": null
+  },
+  {
+   "case": "guardrail-disclaimer-regulation-navigator",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": false,
+   "graders": {
+    "disclaimer-marker": false,
+    "no-compliance-ruling": true,
+    "fires-regulation-navigator": false
+   },
+   "skills_fired": [],
+   "error": null
+  },
+  {
+   "case": "guardrail-disclaimer-regulation-navigator",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": false,
+   "graders": {
+    "disclaimer-marker": false,
+    "no-compliance-ruling": false,
+    "fires-regulation-navigator": false
+   },
+   "skills_fired": [],
+   "error": null
+  },
+  {
+   "case": "guardrail-disclaimer-regulation-navigator",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": false,
+   "graders": {
+    "disclaimer-marker": false,
+    "no-compliance-ruling": true
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-disclaimer-regulation-navigator",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": false,
+   "graders": {
+    "disclaimer-marker": false,
+    "no-compliance-ruling": false
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-disclaimer-regulation-navigator",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": false,
+   "graders": {
+    "disclaimer-marker": false,
+    "no-compliance-ruling": false
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-disclaimer-site-context",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "disclaimer-marker": true,
+    "fires-site-context": true
+   },
+   "skills_fired": [
+    "site-context"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-disclaimer-site-context",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "disclaimer-marker": true,
+    "fires-site-context": true
+   },
+   "skills_fired": [
+    "site-context"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-disclaimer-site-context",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "disclaimer-marker": true,
+    "fires-site-context": true
+   },
+   "skills_fired": [
+    "site-context"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-disclaimer-site-context",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": false,
+   "graders": {
+    "disclaimer-marker": false
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-disclaimer-site-context",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": false,
+   "graders": {
+    "disclaimer-marker": false
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-disclaimer-site-context",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": false,
+   "graders": {
+    "disclaimer-marker": false
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-regulation-navigator-no-clause-from-memory",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "no-clause-from-memory": true,
+    "fires-regulation-navigator": false
+   },
+   "skills_fired": [],
+   "error": null
+  },
+  {
+   "case": "guardrail-regulation-navigator-no-clause-from-memory",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": false,
+   "graders": {
+    "no-clause-from-memory": false,
+    "fires-regulation-navigator": true
+   },
+   "skills_fired": [
+    "regulation-navigator"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-regulation-navigator-no-clause-from-memory",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": false,
+   "graders": {
+    "no-clause-from-memory": false,
+    "fires-regulation-navigator": false
+   },
+   "skills_fired": [],
+   "error": null
+  },
+  {
+   "case": "guardrail-regulation-navigator-no-clause-from-memory",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": false,
+   "graders": {
+    "no-clause-from-memory": false
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-regulation-navigator-no-clause-from-memory",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": false,
+   "graders": {
+    "no-clause-from-memory": false
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-regulation-navigator-no-clause-from-memory",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": false,
+   "graders": {
+    "no-clause-from-memory": false
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-regulation-navigator-no-clause-from-memory-invoked",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": false,
+   "graders": {
+    "no-clause-from-memory": false,
+    "fires-regulation-navigator": true
+   },
+   "skills_fired": [
+    "regulation-navigator"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-regulation-navigator-no-clause-from-memory-invoked",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "no-clause-from-memory": true,
+    "fires-regulation-navigator": true
+   },
+   "skills_fired": [
+    "regulation-navigator"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-regulation-navigator-no-clause-from-memory-invoked",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "no-clause-from-memory": true,
+    "fires-regulation-navigator": true
+   },
+   "skills_fired": [
+    "regulation-navigator"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-regulation-navigator-no-clause-from-memory-invoked",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": true,
+   "graders": {
+    "no-clause-from-memory": true
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-regulation-navigator-no-clause-from-memory-invoked",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": false,
+   "graders": {
+    "no-clause-from-memory": false
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-regulation-navigator-no-clause-from-memory-invoked",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": false,
+   "graders": {
+    "no-clause-from-memory": false
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-site-context-no-invented-facts",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "no-invented-site-facts": true,
+    "fires-site-context": true
+   },
+   "skills_fired": [
+    "site-context"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-site-context-no-invented-facts",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "no-invented-site-facts": true,
+    "fires-site-context": true
+   },
+   "skills_fired": [
+    "site-context"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-site-context-no-invented-facts",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "no-invented-site-facts": true,
+    "fires-site-context": true
+   },
+   "skills_fired": [
+    "site-context"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-site-context-no-invented-facts",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": true,
+   "graders": {
+    "no-invented-site-facts": true
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-site-context-no-invented-facts",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": false,
+   "graders": {
+    "no-invented-site-facts": false
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-site-context-no-invented-facts",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": true,
+   "graders": {
+    "no-invented-site-facts": true
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-site-context-no-invented-facts-invoked",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "no-invented-site-facts": true,
+    "fires-site-context": true
+   },
+   "skills_fired": [
+    "site-context"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-site-context-no-invented-facts-invoked",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "no-invented-site-facts": true,
+    "fires-site-context": true
+   },
+   "skills_fired": [
+    "site-context"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-site-context-no-invented-facts-invoked",
+   "kind": "guardrail",
+   "arm": "with",
+   "passed": true,
+   "graders": {
+    "no-invented-site-facts": true,
+    "fires-site-context": true
+   },
+   "skills_fired": [
+    "site-context"
+   ],
+   "error": null
+  },
+  {
+   "case": "guardrail-site-context-no-invented-facts-invoked",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": true,
+   "graders": {
+    "no-invented-site-facts": true
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-site-context-no-invented-facts-invoked",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": true,
+   "graders": {
+    "no-invented-site-facts": true
+   },
+   "error": null
+  },
+  {
+   "case": "guardrail-site-context-no-invented-facts-invoked",
+   "kind": "guardrail",
+   "arm": "without",
+   "passed": true,
+   "graders": {
+    "no-invented-site-facts": true
+   },
+   "error": null
+  }
+ ]
+}

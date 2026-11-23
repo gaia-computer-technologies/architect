@@ -69,6 +69,8 @@ Not covered: [daylight/sunlight compliance, terrain, neighbouring geometry]
 <!-- architect:requires-disclaimer -->
 ```
 
+Copy the disclaimer exactly as shown, including the `<!-- architect:requires-disclaimer -->` line. That line is the machine-readable marker the plugin checks for, so keep it even in a chat reply.
+
 ## What you don't do
 
 - Don't guess location or time zone.

@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-tool-setup-1
+description: Should route to tool-setup.
+tags:
+- trigger
+- skill:tool-setup
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: How do I connect Rhino to you? We use Rhino 8 and Revit 2026 in the office.
+graders:
+- name: fires-tool-setup
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:tool-setup)"'
+  arm: both

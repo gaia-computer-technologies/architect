@@ -68,6 +68,8 @@ This is not a whole-life carbon assessment to a standard (e.g. EN 15978, the RIC
 <!-- architect:requires-disclaimer -->
 ```
 
+Copy the disclaimer exactly as shown, including the `<!-- architect:requires-disclaimer -->` line. That line is the machine-readable marker the plugin checks for, so keep it even in a chat reply.
+
 ## What you don't do
 
 - Don't use an emission factor without a citation. Not even "a typical value". Ask or search, and show the source.

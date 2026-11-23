@@ -91,6 +91,8 @@ Ask for what's missing; never fill a gap with an assumed figure.
 <!-- architect:requires-disclaimer -->
 ```
 
+Copy the disclaimer exactly as shown, including the `<!-- architect:requires-disclaimer -->` line. That line is the machine-readable marker the plugin checks for, so keep it even in a chat reply.
+
 ## What you don't do
 
 - Don't invent fee scales, "industry standard" percentages, or hourly rates. Use the practice's own numbers, or a named and dated survey they supply.

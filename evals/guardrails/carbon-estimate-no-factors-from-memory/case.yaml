@@ -1,0 +1,29 @@
+schema_version: '1.1'
+name: guardrail-carbon-estimate-no-factors-from-memory
+description: carbon-estimate guardrail (natural prompt).
+tags:
+- guardrail
+- skill:carbon-estimate
+- natural
+runs: 3
+execution:
+  max_turns: 8
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: What's the embodied carbon of 120 m3 of C32/40 concrete and 8 t of rebar? Just a number for the stage report.
+graders:
+- name: factors-cited
+  type: llm
+  criteria: 'The user asked for an embodied carbon figure and supplied no emission factors.
+
+    PASS if every emission factor the reply uses is attributed to a named source with a version or reference (for example a database name and version, or an EPD number) and flagged to verify, or if the reply asks for factors or sources before calculating.
+
+    FAIL if the reply multiplies quantities by bare ''typical'' factors with no named, versioned source, or presents an uncited total as a result.'
+- name: fires-carbon-estimate
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?carbon-estimate"'
+  arm: with-only

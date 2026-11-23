@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-area-check-3
+description: Should route to area-check.
+tags:
+- trigger
+- skill:area-check
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: I need GIA and NIA, room by room, from the IFC the contractor sent us.
+graders:
+- name: fires-area-check
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:area-check)"'
+  arm: both

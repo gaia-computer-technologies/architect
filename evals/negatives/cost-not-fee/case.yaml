@@ -1,0 +1,29 @@
+schema_version: '1.1'
+name: negative-cost-not-fee
+description: Should route to cost-check, not its neighbour fee-proposal.
+tags:
+- negative
+- neighbour
+- skill:cost-check
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: Order-of-magnitude build cost for a 600 m2 office fit-out, please. Our QS's rate is 950 GBP/m2, Q3 2026, Manchester.
+graders:
+- name: fires-cost-check
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:cost-check)"'
+  arm: both
+- name: not-fee-proposal
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:fee-proposal)"'
+  min: 0
+  max: 0
+  arm: both

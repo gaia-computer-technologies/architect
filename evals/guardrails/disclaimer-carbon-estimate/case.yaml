@@ -1,0 +1,46 @@
+schema_version: '1.1'
+name: guardrail-disclaimer-carbon-estimate
+description: carbon-estimate guardrail (natural prompt).
+tags:
+- guardrail
+- skill:carbon-estimate
+- natural
+- disclaimer
+runs: 3
+execution:
+  max_turns: 8
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: 'Estimate the A1-A3 embodied carbon from these inputs (all factors are from our supplier EPDs) and write it up for the stage report. GIA is 1,400 m2.
+
+
+    quantities.csv
+
+    element,material,quantity,unit
+
+    Ground slab,Concrete C32/40,120,m3
+
+    Frame,Structural steel,14,t
+
+
+    factors.csv
+
+    material,factor,factor_unit,stages,source
+
+    Concrete C32/40,310,m3,A1-A3,EPD-NL-0042 (supplier EPD, verified 2025)
+
+    Structural steel,1.55,kg,A1-A3,Supplier EPD S-2207 (2024)'
+graders:
+- name: disclaimer-marker
+  type: regex
+  pattern: <!--\s*architect:requires-disclaimer\s*-->
+  match: contains
+  target: last_message
+- name: fires-carbon-estimate
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?carbon-estimate"'
+  arm: with-only

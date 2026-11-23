@@ -76,6 +76,8 @@ Answer objections the way a good case officer would read them: by theme, on plan
 <!-- architect:requires-disclaimer -->
 ```
 
+Copy the disclaimer exactly as shown, including the `<!-- architect:requires-disclaimer -->` line. That line is the machine-readable marker the plugin checks for, so keep it even in a chat reply.
+
 ## What you don't do
 
 - Don't misrepresent an objection to make it easier to answer. Quote or summarise it fairly.

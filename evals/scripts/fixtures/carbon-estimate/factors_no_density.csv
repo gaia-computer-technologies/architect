@@ -1,0 +1,4 @@
+material,factor,factor_unit,stages,source,density_kg_m3,density_source
+Concrete C32/40,0.1,kg,A1-A3,TEST FIXTURE factor,,
+CLT panel,100,m3,A1-A3,TEST FIXTURE factor,,
+Structural steel,1.5,kg,A1-A3,TEST FIXTURE factor,,

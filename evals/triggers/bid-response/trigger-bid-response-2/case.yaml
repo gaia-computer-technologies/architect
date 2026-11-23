@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-bid-response-2
+description: Should route to bid-response.
+tags:
+- trigger
+- skill:bid-response
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: Score our draft PQQ answer on social value against the published criteria, and tell me which of our past projects to use as case studies.
+graders:
+- name: fires-bid-response
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:bid-response)"'
+  arm: both

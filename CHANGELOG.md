@@ -3,6 +3,16 @@
 All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning is [SemVer](https://semver.org/).
 
+## [Unreleased]
+
+### Added
+- `evals/`: an eval suite for the plugin's promises. Script evals run every bundled script on a tiny checked-in fixture and check the expected numbers and refusals (no API key; in CI). `claude plugin eval` cases measure routing (97 trigger prompts across all 45 skills, 16 negatives) and the guardrails (no clause text, cost rate or carbon factor from memory; fabricated appeal flagged; no contractual entitlement; no invented site facts; the disclaimer marker), with and without the plugin. Baseline results are in the README under "How it is measured" and per run in `evals/baseline/`.
+- CI job `evals`: script evals, suite structure checks and `claude plugin validate`.
+
+### Fixed
+- The disclaimer marker was often dropped from chat replies. Four skills (`client-pushback`, `contract-admin-letter`, `ifc-query`, `rfi`) had it as a bare HTML comment outside a code block. All 18 skills that carry it now keep it in a code block and say to copy it exactly.
+- `hooks/hooks.json` quotes `${CLAUDE_PLUGIN_ROOT}`, so the hook runs when the plugin is installed under a path with spaces (reported by `claude plugin validate`).
+
 ## [1.0.0] — 2026-11-22
 
 The concept toolkit becomes an assistant for the architect's whole working week, renamed **architect**, and distributable to any agent.

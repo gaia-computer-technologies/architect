@@ -1,0 +1,104 @@
+{
+  "title": "Eval plan",
+  "boundary": [
+    [
+      -1,
+      -1
+    ],
+    [
+      9,
+      -1
+    ],
+    [
+      9,
+      5
+    ],
+    [
+      -1,
+      5
+    ]
+  ],
+  "rooms": [
+    {
+      "name": "Living",
+      "polygon": [
+        [
+          0,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "expected_area": 20.0
+    },
+    {
+      "name": "Kitchen",
+      "polygon": [
+        [
+          5,
+          0
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "expected_area": 9.0
+    }
+  ],
+  "walls": [
+    {
+      "from": [
+        0,
+        0
+      ],
+      "to": [
+        8,
+        0
+      ],
+      "thickness": 0.2
+    }
+  ],
+  "openings": [
+    {
+      "type": "door",
+      "at": [
+        1,
+        0
+      ],
+      "width": 0.9,
+      "angle": 0
+    }
+  ],
+  "dimensions": [
+    {
+      "from": [
+        0,
+        0
+      ],
+      "to": [
+        8,
+        0
+      ],
+      "offset": 0.6
+    }
+  ]
+}

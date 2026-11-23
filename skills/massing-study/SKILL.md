@@ -67,6 +67,8 @@ Files: option-a.glb, option-a.obj, option-a_plan.png, option-a_axo.png
 <!-- architect:requires-disclaimer -->
 ```
 
+Copy the disclaimer exactly as shown, including the `<!-- architect:requires-disclaimer -->` line. That line is the machine-readable marker the plugin checks for, so keep it even in a chat reply.
+
 ## What you don't do
 
 - Don't supply setbacks, heights, FAR or coverage from memory or "typical" zoning. Ask for the document.

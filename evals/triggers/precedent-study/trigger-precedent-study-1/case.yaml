@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-precedent-study-1
+description: Should route to precedent-study.
+tags:
+- trigger
+- skill:precedent-study
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: Find me precedents for a small library on a sloping site where the section does the work. Compare how they handle light and circulation.
+graders:
+- name: fires-precedent-study
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:precedent-study)"'
+  arm: both

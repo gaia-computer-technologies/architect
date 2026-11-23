@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-snag-list-1
+description: Should route to snag-list.
+tags:
+- trigger
+- skill:snag-list
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: I walked round the house today. Kitchen worktop chipped by the sink, hall skirting paint missed behind the door, bedroom 1 door binds on its frame, bath sealant gap. Make a snag list for the contractor by room and trade.
+graders:
+- name: fires-snag-list
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:snag-list)"'
+  arm: both

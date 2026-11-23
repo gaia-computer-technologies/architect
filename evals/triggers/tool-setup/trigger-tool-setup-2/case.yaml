@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-tool-setup-2
+description: Should route to tool-setup.
+tags:
+- trigger
+- skill:tool-setup
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: Can you see my Revit model? What do I need to install so you can query it?
+graders:
+- name: fires-tool-setup
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:tool-setup)"'
+  arm: both

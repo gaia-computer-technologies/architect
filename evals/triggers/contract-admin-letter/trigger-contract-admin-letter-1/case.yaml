@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-contract-admin-letter-1
+description: Should route to contract-admin-letter.
+tags:
+- trigger
+- skill:contract-admin-letter
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: I'm contract administrator on a JCT Minor Works 2016 job. I need to issue an instruction omitting the garden wall and confirming what we agreed on site yesterday. Can you draft it?
+graders:
+- name: fires-contract-admin-letter
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:contract-admin-letter)"'
+  arm: both

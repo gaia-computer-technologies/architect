@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-concept-parti-1
+description: Should route to concept-parti.
+tags:
+- trigger
+- skill:concept-parti
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: Blank page on a new community centre on a tight urban corner site. Give me two or three strong organising ideas to explore.
+graders:
+- name: fires-concept-parti
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:concept-parti)"'
+  arm: both

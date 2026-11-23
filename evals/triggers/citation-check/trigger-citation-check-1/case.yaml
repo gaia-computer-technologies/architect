@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-citation-check-1
+description: Should route to citation-check.
+tags:
+- trigger
+- skill:citation-check
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: This objection letter cites three appeal decisions and a BRE guide. Before I respond, can you check whether those references are real and actually say what the letter claims?
+graders:
+- name: fires-citation-check
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:citation-check)"'
+  arm: both

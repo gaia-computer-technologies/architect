@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-revit-mcp-1
+description: Should route to revit-mcp.
+tags:
+- trigger
+- skill:revit-mcp
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: Can you pull a room schedule from my Revit model and find the rooms with an empty Department parameter?
+graders:
+- name: fires-revit-mcp
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:revit-mcp)"'
+  arm: both

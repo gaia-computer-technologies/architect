@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-client-pushback-2
+description: Should route to client-pushback.
+tags:
+- trigger
+- skill:client-pushback
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: I need to tell the client their 300k budget won't cover what they're asking for. How do I handle that meeting?
+graders:
+- name: fires-client-pushback
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:client-pushback)"'
+  arm: both

@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-client-pushback-1
+description: Should route to client-pushback.
+tags:
+- trigger
+- skill:client-pushback
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: The client keeps adding rooms after we signed off Stage 2 and expects it all within the original fee. I have a call with them on Thursday. Help me prepare.
+graders:
+- name: fires-client-pushback
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:client-pushback)"'
+  arm: both

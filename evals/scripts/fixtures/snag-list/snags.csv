@@ -1,0 +1,5 @@
+ref,area,room,element,trade,description,priority,status
+S01,Ground floor,Kitchen,Worktop,Joinery,Chip to worktop edge by sink,high,open
+S02,Ground floor,Hall,Skirting,Decorator,Paint missed behind door,low,closed
+S03,First floor,Bed 1,Door,Joinery,Door binds on frame,medium,closed
+S04,First floor,Bath,Sealant,Plumber,Sealant gap at bath end,high,in progress

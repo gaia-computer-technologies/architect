@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-cost-check-3
+description: Should route to cost-check.
+tags:
+- trigger
+- skill:cost-check
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: Is 2.1M enough to build a 900 m2 community centre? Our QS's rate is 2,250 GBP/m2 GIA, dated Q1 2026, Birmingham.
+graders:
+- name: fires-cost-check
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:cost-check)"'
+  arm: both

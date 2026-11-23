@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-cost-check-1
+description: Should route to cost-check.
+tags:
+- trigger
+- skill:cost-check
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: Client wants to know if 180 m2 of new-build house fits in a 450k construction budget. Can you do a quick order-of-magnitude cost check?
+graders:
+- name: fires-cost-check
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:cost-check)"'
+  arm: both

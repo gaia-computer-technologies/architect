@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-dxf-drawing-2
+description: Should route to dxf-drawing.
+tags:
+- trigger
+- skill:dxf-drawing
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: 'I need a CAD file of the site boundary from these coordinates so I can trace over it in AutoCAD: (0,0), (32.5,0), (35,18), (2,21).'
+graders:
+- name: fires-dxf-drawing
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:dxf-drawing)"'
+  arm: both

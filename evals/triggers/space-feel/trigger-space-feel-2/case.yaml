@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-space-feel-2
+description: Should route to space-feel.
+tags:
+- trigger
+- skill:space-feel
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: 'Describe the atmosphere of walking through our bathhouse: stone, steam, the sound dropping away as you go deeper.'
+graders:
+- name: fires-space-feel
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:space-feel)"'
+  arm: both

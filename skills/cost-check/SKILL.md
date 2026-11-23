@@ -67,6 +67,8 @@ Architects need to know early whether a scheme is roughly affordable. A cost che
 <!-- architect:requires-disclaimer -->
 ```
 
+Copy the disclaimer exactly as shown, including the `<!-- architect:requires-disclaimer -->` line. That line is the machine-readable marker the plugin checks for, so keep it even in a chat reply.
+
 ## What you don't do
 
 - Don't quote a construction rate from memory as fact. A rate needs a source, date, and location, or it doesn't go in the table.

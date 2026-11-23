@@ -1,0 +1,1 @@
+{"spaces": [{"name": "Hall", "area": 100}], "adjacencies": [{"a": "Hall", "b": "Gym", "strength": "required"}]}

@@ -1,0 +1,5 @@
+date,person,project,hours
+2026-11-02,Alice,P1,10
+2026-11-03,Bob,P1,10
+2026-11-04,Alice,P2,20
+2026-11-05,Bob,LEAVE,8

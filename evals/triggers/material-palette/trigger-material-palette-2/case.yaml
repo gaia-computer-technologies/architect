@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-material-palette-2
+description: Should route to material-palette.
+tags:
+- trigger
+- skill:material-palette
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: We're anchoring the scheme on reclaimed brick. What goes with it? Give me three to five materials with finishes and how they will age.
+graders:
+- name: fires-material-palette
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:material-palette)"'
+  arm: both

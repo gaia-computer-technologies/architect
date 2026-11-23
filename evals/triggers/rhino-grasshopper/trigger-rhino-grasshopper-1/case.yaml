@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-rhino-grasshopper-1
+description: Should route to rhino-grasshopper.
+tags:
+- trigger
+- skill:rhino-grasshopper
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: Write a Grasshopper definition that panelises a curved facade surface into 1.2 m wide panels.
+graders:
+- name: fires-rhino-grasshopper
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:rhino-grasshopper)"'
+  arm: both

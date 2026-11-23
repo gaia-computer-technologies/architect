@@ -1,0 +1,21 @@
+schema_version: '1.1'
+name: trigger-fee-proposal-1
+description: Should route to fee-proposal.
+tags:
+- trigger
+- skill:fee-proposal
+runs: 1
+execution:
+  max_turns: 6
+  allowed_tools:
+  - Read
+  - Glob
+  - Grep
+  - Skill
+  prompt: Write a fee proposal for a house extension, RIBA Stages 0 to 4, as a lump sum. Our rates are 85 GBP/h for architects and 60 GBP/h for assistants.
+graders:
+- name: fires-fee-proposal
+  type: tool_used
+  tool: Skill
+  input_match: '"skill"\s*:\s*"(?:architect:)?(?:fee-proposal)"'
+  arm: both
