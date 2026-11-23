@@ -24,6 +24,12 @@ The colleague who writes the brief, reads the site, draws the diagram, checks th
 
 <br/>
 
+<img src="assets/demo.gif" alt="Terminal recording of three skill scripts run for real. site-map pulls 150 m of Rotterdam from OpenStreetMap and prints building, street and green counts, how many heights are tagged, assumed or unknown, and building coverage of 49.1%. dxf-drawing writes a three-room DXF plan and checks each drawn room area against the expected area. massing-study echoes its planning inputs as user-supplied, then shows the arithmetic from a 1,200 m2 site to a 714 m2 footprint, six storeys by height cut to five by the FAR cap, 3,570 m2 gross and 43 units." width="840">
+
+<sub>Real runs of the skills' own scripts, with the OpenStreetMap fetch cached beforehand. Re-record it: <code>vhs assets/tapes/demo.tape</code></sub>
+
+<br/><br/>
+
 | `site-map`, Rotterdam from OpenStreetMap | `dxf-drawing`, a layered DXF with real dimensions | `sun-study`, solstices and equinoxes |
 |---|---|---|
 | ![Figure-ground of a Rotterdam block from OpenStreetMap, with scale bar, north arrow and ODbL credit](assets/gallery/site-map.png) | ![A dimensioned plan with three rooms labelled with their areas, a door swing and a north marker, previewed from the DXF](assets/gallery/dxf-drawing.png) | ![Sun-path diagram for Rotterdam with the June and December solstices and both equinoxes, hourly marks, and a not-a-compliance-calculation note](assets/gallery/sun-study.png) |
