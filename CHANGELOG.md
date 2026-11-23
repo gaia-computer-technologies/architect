@@ -13,6 +13,11 @@ All notable changes to this project are documented here. Format follows
 - The disclaimer marker was often dropped from chat replies. Four skills (`client-pushback`, `contract-admin-letter`, `ifc-query`, `rfi`) had it as a bare HTML comment outside a code block. All 18 skills that carry it now keep it in a code block and say to copy it exactly.
 - `hooks/hooks.json` quotes `${CLAUDE_PLUGIN_ROOT}`, so the hook runs when the plugin is installed under a path with spaces (reported by `claude plugin validate`).
 
+## [Unreleased]
+
+### Docs
+- README artwork follows Gaia's design system: paper `#FDFDFA`, Gaia Black `#1A1A1A`, True Black `#0A0A0A`, neon `#DEFF00` only on dark surfaces; ITC Garamond Narrow, Basis Grotesque and Routed Gothic in the hero; the Gaia signature mark. Badges and all four mermaid diagrams use the same tokens. The hero's HTML source and a tile script live in `assets/src/`; the licensed fonts are gitignored and never committed.
+
 ## [1.0.0] — 2026-11-22
 
 The concept toolkit becomes an assistant for the architect's whole working week, renamed **architect**, and distributable to any agent.

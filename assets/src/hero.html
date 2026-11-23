@@ -1,0 +1,36 @@
+<!doctype html><meta charset="utf-8">
+<style>
+@font-face{font-family:Garamond;src:url("fonts/garamond-itc-light-narrow.woff2") format("woff2");font-weight:300}
+@font-face{font-family:Basis;src:url("fonts/basis-grotesque-regular.woff2") format("woff2")}
+@font-face{font-family:Routed;src:url("fonts/routed-gothic.woff2") format("woff2")}
+*{margin:0;box-sizing:border-box}
+html,body{width:1680px;height:840px;background:#FDFDFA;color:#1A1A1A;overflow:hidden}
+.wrap{position:relative;width:1680px;height:840px}
+.left{position:absolute;left:92px;top:84px;width:760px}
+.eyebrow{font:400 19px Routed;letter-spacing:.12em;text-transform:uppercase;color:#6B6B6B}
+h1{font:300 218px/0.9 Garamond;letter-spacing:-.03em;margin:46px 0 34px -8px}
+.body{font:400 31px/1.48 Basis;color:#1A1A1A}
+.agents{margin-top:34px;font:400 17px Routed;letter-spacing:.10em;text-transform:uppercase;color:#6B6B6B}
+.grid{position:absolute;left:908px;top:60px;display:grid;grid-template-columns:340px 340px;gap:24px}
+.tile img{display:block;width:340px;height:262px;object-fit:contain;background:#FDFDFA;border:1px solid #D0CFC9}
+.tile span{display:block;margin-top:10px;font:400 15px Routed;letter-spacing:.08em;text-transform:uppercase}
+.strip{position:absolute;left:0;right:0;bottom:0;height:132px;background:#0A0A0A;display:flex;align-items:center;padding:0 92px;gap:56px}
+.strip img{height:62px}
+.stats{font:400 22px Routed;letter-spacing:.10em;text-transform:uppercase;color:#DEFF00}
+.cmd{margin-left:auto;font:400 18px Routed;letter-spacing:.08em;color:#F3F3F3;text-transform:uppercase}
+</style>
+<div class="wrap">
+ <div class="left">
+  <div class="eyebrow">Open source &nbsp;/&nbsp; Agent Skills for architects</div>
+  <h1>/architect</h1>
+  <div class="body">Agent Skills for the architect's working week,<br>from the first brief to the snag list.<br>Every number shows its basis.</div>
+  <div class="agents">Claude &nbsp;/&nbsp; Cursor &nbsp;/&nbsp; Codex &nbsp;/&nbsp; Copilot</div>
+ </div>
+ <div class="grid">
+  <div class="tile"><img src="../gallery/site-map.png"><span>site-map</span></div>
+  <div class="tile"><img src="../gallery/dxf-drawing.png"><span>dxf-drawing</span></div>
+  <div class="tile"><img src="../gallery/massing-study.png"><span>massing-study</span></div>
+  <div class="tile"><img src="../gallery/design-diagram.png"><span>design-diagram</span></div>
+ </div>
+ <div class="strip"><img src="gaia-signature.svg" alt=""><div class="stats">45 skills &nbsp;/&nbsp; 12 scripts &nbsp;/&nbsp; 2 agents &nbsp;/&nbsp; MIT</div><div class="cmd">claude plugin install architect@gaia</div></div>
+</div>
