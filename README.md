@@ -16,10 +16,10 @@ The colleague who writes the brief, reads the site, draws the diagram, checks th
 <br/>
 
 [![skills.sh](https://skills.sh/b/gaia-computer-technologies/architect)](https://skills.sh/gaia-computer-technologies/architect)
-[![GitHub stars](https://img.shields.io/github/stars/gaia-computer-technologies/architect?color=000000)](https://github.com/gaia-computer-technologies/architect/stargazers)
-![skills](https://img.shields.io/badge/skills-45-000000)
-![agents](https://img.shields.io/badge/works%20in-Claude%20%C2%B7%20Cursor%20%C2%B7%20Codex%20%C2%B7%20Copilot-000000)
-![license](https://img.shields.io/badge/license-MIT-000000)
+[![GitHub stars](https://img.shields.io/github/stars/gaia-computer-technologies/architect?color=1A1A1A)](https://github.com/gaia-computer-technologies/architect/stargazers)
+![skills](https://img.shields.io/badge/skills-45-1A1A1A)
+![agents](https://img.shields.io/badge/works%20in-Claude%20%C2%B7%20Cursor%20%C2%B7%20Codex%20%C2%B7%20Copilot-1A1A1A)
+![license](https://img.shields.io/badge/license-MIT-1A1A1A)
 [![validate](https://github.com/gaia-computer-technologies/architect/actions/workflows/validate.yml/badge.svg)](https://github.com/gaia-computer-technologies/architect/actions/workflows/validate.yml)
 
 <br/>
@@ -90,8 +90,8 @@ flowchart LR
     O --> V["To verify<br/>named professional"]
     V -. "you check" .-> O
 
-    classDef core fill:#000000,stroke:#000000,color:#ffffff
-    classDef box fill:#ffffff,stroke:#000000,color:#000000
+    classDef core fill:#0A0A0A,stroke:#0A0A0A,color:#DEFF00
+    classDef box fill:#FDFDFA,stroke:#1A1A1A,color:#1A1A1A
     class A core
     class U,R,D,W,C,O,F,T,V box
 ```
@@ -115,8 +115,8 @@ flowchart TD
     MAP --> OUT
     OUT --> FLAG["Regulated claim?<br/>disclaimer + who confirms"]
 
-    classDef core fill:#000000,stroke:#000000,color:#ffffff
-    classDef box fill:#ffffff,stroke:#000000,color:#000000
+    classDef core fill:#0A0A0A,stroke:#0A0A0A,color:#DEFF00
+    classDef box fill:#FDFDFA,stroke:#1A1A1A,color:#1A1A1A
     class OUT core
     class Q,J,ASK,N,S,SRC,CITE,MAP,FLAG box
 ```
@@ -181,15 +181,15 @@ flowchart LR
     %% No links between stages: links make mermaid ignore each stage's direction.
     %% Declared in reverse: mermaid stacks unlinked groups last-declared on top.
 
-    classDef box fill:#ffffff,stroke:#000000,color:#000000
+    classDef box fill:#FDFDFA,stroke:#1A1A1A,color:#1A1A1A
     class w1,w2,w3,b1,b2,b3,b4,c1,c2,c3,c4,p1,p2,p3,t1,t2,t3,t4,s1,s2,s3,s4,u1 box
-    style WIN fill:none,stroke:#000000,stroke-width:2px
-    style BRIEF fill:none,stroke:#000000,stroke-width:2px
-    style CON fill:none,stroke:#000000,stroke-width:2px
-    style PLAN fill:none,stroke:#000000,stroke-width:2px
-    style TECH fill:none,stroke:#000000,stroke-width:2px
-    style SITE fill:none,stroke:#000000,stroke-width:2px
-    style USE fill:none,stroke:#000000,stroke-width:2px
+    style WIN fill:none,stroke:#1A1A1A,stroke-width:2px
+    style BRIEF fill:none,stroke:#1A1A1A,stroke-width:2px
+    style CON fill:none,stroke:#1A1A1A,stroke-width:2px
+    style PLAN fill:none,stroke:#1A1A1A,stroke-width:2px
+    style TECH fill:none,stroke:#1A1A1A,stroke-width:2px
+    style SITE fill:none,stroke:#1A1A1A,stroke-width:2px
+    style USE fill:none,stroke:#1A1A1A,stroke-width:2px
 ```
 
 The **project-architect** agent runs this arc and chains skills where the work chains: an objection letter goes through `citation-check` before `objection-response`; a VE request goes to `cost-check` and `carbon-estimate` before `value-engineering`. The **concept-architect** agent runs the concept stage.
@@ -234,13 +234,13 @@ flowchart LR
     A --> BB & MF & MP
     A --> CODE
 
-    classDef core fill:#000000,stroke:#000000,color:#ffffff
-    classDef box fill:#ffffff,stroke:#000000,color:#000000
+    classDef core fill:#0A0A0A,stroke:#0A0A0A,color:#DEFF00
+    classDef box fill:#FDFDFA,stroke:#1A1A1A,color:#1A1A1A
     class A core
     class RH,RV,AC,IFC,SU,BB,MF,MP,K1,K2,K3 box
-    style BIM fill:none,stroke:#000000,stroke-width:2px
-    style DOC fill:none,stroke:#000000,stroke-width:2px
-    style CODE fill:none,stroke:#000000,stroke-width:2px,stroke-dasharray:6 4
+    style BIM fill:none,stroke:#1A1A1A,stroke-width:2px
+    style DOC fill:none,stroke:#1A1A1A,stroke-width:2px
+    style CODE fill:none,stroke:#1A1A1A,stroke-width:2px,stroke-dasharray:6 4
 ```
 
 | Software | Route | Watch out for |
